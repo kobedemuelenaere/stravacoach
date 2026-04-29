@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """
 StravaCoach stream analyzer.
-Usage: python3 analyze_streams.py <streams.json> [--max-hr 190]
+Usage:
+    python3 analyze_streams.py <streams.json> [--max-hr 190]
+    python3 analyze_streams.py --activity-id 123456 [--max-hr 190] [--env-file .env] [--save-input streams.json]
 Output: structured analysis JSON to stdout
 
 Input JSON format:
@@ -12,14 +14,284 @@ Input JSON format:
 """
 
 import json
-import sys
+import os
 import statistics
-from typing import Optional
+import sys
+from pathlib import Path
+from typing import Dict, Optional
+from urllib import error, parse, request
 
 # ── Constants ────────────────────────────────────────────────────────────────
 
 DEFAULT_MAX_HR = 190
-WARMUP_SECONDS = 600  # first 10 minutes excluded from adjusted HR
+WARMUP_MAX_SECONDS = 300  # at most first 5 minutes can be excluded from adjusted HR
+
+STRAVA_API_BASE = "https://www.strava.com/api/v3"
+STRAVA_CONFIG_PATH = Path.home() / ".config" / "strava-mcp" / "config.json"
+DEFAULT_ENV_FILE = Path.cwd() / ".env"
+
+
+# ── Strava input helpers ─────────────────────────────────────────────────────
+
+def parse_args(argv):
+    args = {
+        "filepath": None,
+        "activity_id": None,
+        "max_hr": DEFAULT_MAX_HR,
+        "env_file": str(DEFAULT_ENV_FILE),
+        "save_input": None,
+    }
+
+    i = 0
+    while i < len(argv):
+        arg = argv[i]
+        if arg == "--max-hr" and i + 1 < len(argv):
+            args["max_hr"] = int(argv[i + 1])
+            i += 2
+            continue
+        if arg == "--activity-id" and i + 1 < len(argv):
+            args["activity_id"] = int(argv[i + 1])
+            i += 2
+            continue
+        if arg == "--env-file" and i + 1 < len(argv):
+            args["env_file"] = argv[i + 1]
+            i += 2
+            continue
+        if arg == "--save-input" and i + 1 < len(argv):
+            args["save_input"] = argv[i + 1]
+            i += 2
+            continue
+
+        if arg == "--help":
+            print(
+                "Usage:\n"
+                "  python3 analyze_streams.py <streams.json> [--max-hr 190]\n"
+                "  python3 analyze_streams.py --activity-id 123456 [--max-hr 190] [--env-file .env] [--save-input streams.json]\n"
+                "\n"
+                "Input priority when --activity-id is used:\n"
+                "  1) environment variables\n"
+                "  2) ~/.config/strava-mcp/config.json\n"
+                "  3) local .env file (or --env-file path)\n"
+            )
+            sys.exit(0)
+
+        if not arg.startswith("--") and args["filepath"] is None:
+            args["filepath"] = arg
+            i += 1
+            continue
+
+        raise ValueError(f"Unknown argument: {arg}")
+
+    return args
+
+
+def read_env_file(path: Path) -> Dict[str, str]:
+    values: Dict[str, str] = {}
+    if not path.exists():
+        return values
+
+    for raw_line in path.read_text().splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        values[key.strip()] = value.strip().strip('"').strip("'")
+    return values
+
+
+def read_strava_mcp_config(path: Path) -> Dict[str, str]:
+    if not path.exists():
+        return {}
+
+    try:
+        cfg = json.loads(path.read_text())
+    except Exception:
+        return {}
+
+    return {
+        "STRAVA_ACCESS_TOKEN": cfg.get("accessToken"),
+        "STRAVA_REFRESH_TOKEN": cfg.get("refreshToken"),
+        "STRAVA_CLIENT_ID": str(cfg.get("clientId")) if cfg.get("clientId") is not None else None,
+        "STRAVA_CLIENT_SECRET": cfg.get("clientSecret"),
+    }
+
+
+def merge_auth(env_file: Path) -> Dict[str, str]:
+    merged: Dict[str, str] = {}
+
+    dot_env = read_env_file(env_file)
+    for key, value in dot_env.items():
+        if value:
+            merged[key] = value
+
+    cfg = read_strava_mcp_config(STRAVA_CONFIG_PATH)
+    for key, value in cfg.items():
+        if value:
+            merged[key] = value
+
+    for key in ("STRAVA_ACCESS_TOKEN", "STRAVA_REFRESH_TOKEN", "STRAVA_CLIENT_ID", "STRAVA_CLIENT_SECRET"):
+        value = os.environ.get(key)
+        if value:
+            merged[key] = value
+
+    return merged
+
+
+def write_env_values(env_path: Path, updates: Dict[str, str]) -> None:
+    existing = {}
+    if env_path.exists():
+        existing = read_env_file(env_path)
+    existing.update({k: v for k, v in updates.items() if v})
+    lines = [f"{k}={v}" for k, v in existing.items()]
+    env_path.write_text("\n".join(lines) + "\n")
+
+
+def write_mcp_tokens(access_token: str, refresh_token: str) -> None:
+    if not STRAVA_CONFIG_PATH.exists():
+        return
+    try:
+        cfg = json.loads(STRAVA_CONFIG_PATH.read_text())
+    except Exception:
+        return
+    cfg["accessToken"] = access_token
+    cfg["refreshToken"] = refresh_token
+    STRAVA_CONFIG_PATH.parent.mkdir(parents=True, exist_ok=True)
+    STRAVA_CONFIG_PATH.write_text(json.dumps(cfg, indent=2))
+
+
+def http_get(url: str, token: str):
+    req = request.Request(url, headers={"Authorization": f"Bearer {token}", "Accept": "application/json"})
+    with request.urlopen(req) as resp:
+        return json.loads(resp.read().decode("utf-8"))
+
+
+def http_post_json(url: str, payload: Dict[str, str]):
+    data = parse.urlencode(payload).encode("utf-8")
+    req = request.Request(url, data=data, method="POST")
+    with request.urlopen(req) as resp:
+        return json.loads(resp.read().decode("utf-8"))
+
+
+def refresh_access_token(auth: Dict[str, str], env_file: Path) -> Dict[str, str]:
+    refresh_token = auth.get("STRAVA_REFRESH_TOKEN")
+    client_id = auth.get("STRAVA_CLIENT_ID")
+    client_secret = auth.get("STRAVA_CLIENT_SECRET")
+
+    if not refresh_token or not client_id or not client_secret:
+        raise RuntimeError(
+            "Cannot refresh token. Missing STRAVA_REFRESH_TOKEN, STRAVA_CLIENT_ID, or STRAVA_CLIENT_SECRET."
+        )
+
+    token_data = http_post_json(
+        "https://www.strava.com/oauth/token",
+        {
+            "client_id": str(client_id),
+            "client_secret": client_secret,
+            "grant_type": "refresh_token",
+            "refresh_token": refresh_token,
+        },
+    )
+
+    new_access = token_data.get("access_token")
+    new_refresh = token_data.get("refresh_token")
+    if not new_access or not new_refresh:
+        raise RuntimeError("Strava refresh succeeded but response was missing token fields.")
+
+    auth["STRAVA_ACCESS_TOKEN"] = new_access
+    auth["STRAVA_REFRESH_TOKEN"] = new_refresh
+
+    os.environ["STRAVA_ACCESS_TOKEN"] = new_access
+    os.environ["STRAVA_REFRESH_TOKEN"] = new_refresh
+
+    write_env_values(env_file, {
+        "STRAVA_ACCESS_TOKEN": new_access,
+        "STRAVA_REFRESH_TOKEN": new_refresh,
+    })
+    write_mcp_tokens(new_access, new_refresh)
+    return auth
+
+
+def strava_get_with_refresh(path: str, auth: Dict[str, str], env_file: Path, params: Optional[Dict[str, str]] = None):
+    token = auth.get("STRAVA_ACCESS_TOKEN")
+    if not token:
+        raise RuntimeError("Missing STRAVA_ACCESS_TOKEN. Set env/.env or connect via strava-mcp first.")
+
+    query = f"?{parse.urlencode(params)}" if params else ""
+    url = f"{STRAVA_API_BASE}{path}{query}"
+
+    try:
+        return http_get(url, token)
+    except error.HTTPError as exc:
+        if exc.code != 401:
+            body = exc.read().decode("utf-8", errors="ignore")
+            raise RuntimeError(f"Strava API error {exc.code} on {path}: {body}")
+        refresh_access_token(auth, env_file)
+        return http_get(url, auth["STRAVA_ACCESS_TOKEN"])
+
+
+def fetch_activity_input(activity_id: int, env_file: Path) -> Dict:
+    auth = merge_auth(env_file)
+
+    details = strava_get_with_refresh(f"/activities/{activity_id}", auth, env_file)
+    streams_raw = strava_get_with_refresh(
+        f"/activities/{activity_id}/streams/time,distance,heartrate,altitude,velocity_smooth,grade_smooth",
+        auth,
+        env_file,
+        params={"key_by_type": "true"},
+    )
+
+    def stream_data(name: str):
+        entry = streams_raw.get(name)
+        return entry.get("data", []) if isinstance(entry, dict) else []
+
+    return {
+        "metadata": {
+            "activity_id": details.get("id"),
+            "activity_name": details.get("name"),
+            "date": details.get("start_date_local", "")[:10],
+            "elapsed_time_s": details.get("elapsed_time"),
+            "distance_m": details.get("distance"),
+            "total_elevation_gain": details.get("total_elevation_gain"),
+        },
+        "streams": {
+            "time": stream_data("time"),
+            "distance": stream_data("distance"),
+            "heartrate": stream_data("heartrate"),
+            "altitude": stream_data("altitude"),
+            "velocity_smooth": stream_data("velocity_smooth"),
+            "grade_smooth": stream_data("grade_smooth"),
+        },
+    }
+
+
+def detect_warmup_end_idx(time, heartrate, max_hr):
+    """
+    Exclude warmup only when HR clearly ramps up after the first 5 minutes.
+    Returns (warmup_end_idx, was_excluded).
+    """
+    if not time or len(time) < 3:
+        return 0, False
+
+    warmup_end_idx = next((i for i, t in enumerate(time) if (t - time[0]) >= WARMUP_MAX_SECONDS), len(time) - 1)
+
+    if warmup_end_idx <= 1 or not heartrate or len(heartrate) <= warmup_end_idx + 3:
+        return 0, False
+
+    early_hr = [h for h in heartrate[:warmup_end_idx + 1] if h is not None]
+    later_end_idx = min(len(heartrate), warmup_end_idx + 1 + (warmup_end_idx + 1))
+    later_hr = [h for h in heartrate[warmup_end_idx + 1:later_end_idx] if h is not None]
+
+    if not early_hr or not later_hr:
+        return 0, False
+
+    early_avg = statistics.mean(early_hr)
+    later_avg = statistics.mean(later_hr)
+
+    # Exclude first 5 minutes only if warmup HR is substantially lower than the next segment.
+    should_exclude = (later_avg - early_avg) >= 6 and early_avg < (0.75 * max_hr)
+    if should_exclude:
+        return warmup_end_idx, True
+    return 0, False
 
 
 # ── Helpers ──────────────────────────────────────────────────────────────────
@@ -34,11 +306,30 @@ def pace_str(pace_min_km: float) -> str:
         s = 0
     return f"{m}:{s:02d}"
 
+
 def vel_to_pace(v_ms: float) -> Optional[float]:
     """m/s → min/km. Returns None if not moving."""
     if v_ms < 0.3:
         return None
     return (1000.0 / v_ms) / 60.0
+
+def duration_str(seconds) -> str:
+    """Format seconds as M:SS."""
+    s = int(round(seconds))
+    m, s = divmod(s, 60)
+    return f"{m}:{s:02d}"
+
+def parse_pace(pace_s: str) -> Optional[float]:
+    """'M:SS' string → float min/km, or None for 'n/a'."""
+    if not pace_s or pace_s == "n/a":
+        return None
+    parts = pace_s.split(":")
+    if len(parts) != 2:
+        return None
+    try:
+        return int(parts[0]) + int(parts[1]) / 60
+    except ValueError:
+        return None
 
 def hr_zone(hr: float, max_hr: int) -> int:
     pct = hr / max_hr
@@ -55,6 +346,20 @@ def safe_mean(values):
 def safe_max(values):
     vals = [v for v in values if v is not None]
     return max(vals) if vals else None
+
+
+def percentile(values, q):
+    """Simple percentile helper without external deps."""
+    vals = sorted(v for v in values if v is not None)
+    if not vals:
+        return None
+    if len(vals) == 1:
+        return vals[0]
+    pos = (len(vals) - 1) * (q / 100.0)
+    lo = int(pos)
+    hi = min(lo + 1, len(vals) - 1)
+    frac = pos - lo
+    return vals[lo] + (vals[hi] - vals[lo]) * frac
 
 
 # ── Session type detection ────────────────────────────────────────────────────
@@ -122,7 +427,7 @@ def find_hill_repeats(altitude, distance, min_gain=15, min_reps=2):
     return repeats
 
 
-def find_effort_blocks(velocity, time, threshold_factor=1.15, min_duration_s=45, min_gap_s=20):
+def find_effort_blocks(velocity, time, threshold_factor=1.15, min_duration_s=30, min_gap_s=20, velocity_threshold=None):
     """
     Find sustained effort blocks where velocity exceeds threshold_factor * mean for at least min_duration_s.
     Returns list of effort dicts with start/end indices.
@@ -132,7 +437,7 @@ def find_effort_blocks(velocity, time, threshold_factor=1.15, min_duration_s=45,
         return []
 
     mean_vel = statistics.mean(v for _, v in moving)
-    threshold = mean_vel * threshold_factor
+    threshold = velocity_threshold if velocity_threshold is not None else (mean_vel * threshold_factor)
 
     in_effort = False
     effort_start = None
@@ -203,9 +508,56 @@ def detect_session_type(streams, warmup_end_idx, max_hr, total_time_s, total_dis
         stdev_pace = statistics.stdev(valid_paces)
         cv = stdev_pace / mean_pace if mean_pace > 0 else 0
 
+        working_moving_vel = [v for v in working_vel if v > 0.3]
+        adaptive_threshold = None
+        if working_moving_vel:
+            mean_working_vel = statistics.mean(working_moving_vel)
+            # Use a mild threshold to capture sustained work blocks (not only peak surges).
+            adaptive_threshold = mean_working_vel * 1.03
+
+        pattern_efforts = find_effort_blocks(
+            velocity,
+            time,
+            min_duration_s=60,
+            min_gap_s=20,
+            velocity_threshold=adaptive_threshold,
+        ) if time and velocity and adaptive_threshold else []
+
+        if len(pattern_efforts) >= 4:
+            durations = [time[e["end_idx"]] - time[e["start_idx"]] for e in pattern_efforts]
+            recoveries = [
+                time[pattern_efforts[i + 1]["start_idx"]] - time[pattern_efforts[i]["end_idx"]]
+                for i in range(len(pattern_efforts) - 1)
+            ]
+            avg_dur = statistics.mean(durations) if durations else 0
+            avg_rec = statistics.mean(recoveries) if recoveries else 0
+            dur_cv = (statistics.stdev(durations) / avg_dur) if len(durations) >= 3 and avg_dur > 0 else 1.0
+            rec_cv = (statistics.stdev(recoveries) / avg_rec) if len(recoveries) >= 3 and avg_rec > 0 else 1.0
+
+            if 55 <= avg_dur <= 260 and 35 <= avg_rec <= 220 and dur_cv < 0.65 and rec_cv < 0.75:
+                return "intervals", pattern_efforts
+            return "fartlek", pattern_efforts
+
         if cv > 0.16 and time and velocity:
             efforts = find_effort_blocks(velocity, time)
             if len(efforts) >= 2:
+                # Check if fast blocks are predominantly downhill → hill session, not intervals
+                grade = streams.get("grade_smooth", [])
+                if grade:
+                    effort_grades = []
+                    for e in efforts:
+                        seg = grade[e["start_idx"]:e["end_idx"] + 1]
+                        if seg:
+                            effort_grades.append(statistics.mean(seg))
+                    avg_effort_grade = statistics.mean(effort_grades) if effort_grades else 0
+                    if avg_effort_grade < -5 and gain_per_km > 15:
+                        # Fast segments are descents — this is a hill session misclassified
+                        if altitude:
+                            repeats = find_hill_repeats(altitude, distance, min_gain=10)
+                            if len(repeats) >= 2:
+                                return "hill_repeats", repeats
+                        return "trail_mountain", []
+
                 durations = []
                 for e in efforts:
                     t_start = time[e["start_idx"]]
@@ -285,6 +637,7 @@ def analyze_segment(streams, start_idx, end_idx):
 
     return {
         "duration_s": round(duration_s),
+        "duration_str": duration_str(duration_s),
         "distance_m": round(dist_m),
         "avg_pace": pace_str(avg_pace),
         "best_pace": pace_str(max_pace),
@@ -327,8 +680,8 @@ def analyze(data, max_hr=DEFAULT_MAX_HR):
     total_time_s = time[-1] - time[0]
     total_dist_m = (distance[-1] - distance[0]) if distance else 0
 
-    # Warmup cutoff index
-    warmup_end_idx = next((i for i, t in enumerate(time) if (t - time[0]) >= WARMUP_SECONDS), len(time) - 1)
+    # Warmup cutoff index (conditional, max first 5 minutes)
+    warmup_end_idx, warmup_excluded = detect_warmup_end_idx(time, heartrate, max_hr)
 
     # ── Session type detection ──────────────────────────────────────────────
     session_type, structure_data = detect_session_type(
@@ -394,7 +747,11 @@ def analyze(data, max_hr=DEFAULT_MAX_HR):
             "duration_s": round(total_time_s),
             "avg_pace": pace_str(avg_pace_overall),
             "avg_hr_adjusted": avg_hr_adjusted,
-            "avg_hr_note": f"Excludes first {WARMUP_SECONDS // 60} min warmup",
+            "avg_hr_note": (
+                f"Excludes first {WARMUP_MAX_SECONDS // 60} min warmup (HR ramp detected)"
+                if warmup_excluded
+                else "No warmup exclusion applied"
+            ),
             "max_hr": round(max_hr_overall) if max_hr_overall else None,
             "elevation_gain_m": round(total_elevation_gain, 1),
             "hr_efficiency_index": hr_efficiency,
@@ -402,7 +759,7 @@ def analyze(data, max_hr=DEFAULT_MAX_HR):
         "hr_zones": zone_summary,
         "hr_drift_bpm": hr_drift,
         "pacing_split": pacing_split,
-        "warmup_end_seconds": time[warmup_end_idx] - time[0],
+        "warmup_end_seconds": (time[warmup_end_idx] - time[0]) if warmup_excluded else 0,
     }
 
     # ── Type-specific analysis ──────────────────────────────────────────────
@@ -440,8 +797,26 @@ def analyze(data, max_hr=DEFAULT_MAX_HR):
             else:
                 progression = "consistent"
 
+        hill_summary = "n/a"
+        if ascents:
+            avg_climb_s = statistics.mean(a["duration_s"] for a in ascents)
+            avg_gain = statistics.mean(a["elevation_gain_m"] for a in ascents)
+            climb_paces = [parse_pace(a["avg_pace"]) for a in ascents if parse_pace(a["avg_pace"])]
+            avg_climb_pace = pace_str(statistics.mean(climb_paces)) if climb_paces else "n/a"
+            avg_climb_hr = round(statistics.mean(a["avg_hr"] for a in ascents if a["avg_hr"])) if any(a["avg_hr"] for a in ascents) else None
+            parts = [f"{len(ascents)} × ~{duration_str(avg_climb_s)} climb ({round(avg_gain)}m) @ ~{avg_climb_pace}/km"]
+            if avg_climb_hr:
+                parts[0] += f" HR ~{avg_climb_hr}"
+            if descents:
+                avg_desc_s = statistics.mean(d["duration_s"] for d in descents)
+                desc_paces = [parse_pace(d["avg_pace"]) for d in descents if parse_pace(d["avg_pace"])]
+                avg_desc_pace = pace_str(statistics.mean(desc_paces)) if desc_paces else "n/a"
+                parts.append(f"~{duration_str(avg_desc_s)} descent @ ~{avg_desc_pace}/km")
+            hill_summary = " | ".join(parts)
+
         result["hill_repeats"] = {
             "total_reps": len(ascents),
+            "summary": hill_summary,
             "ascents": ascents,
             "descents": descents,
             "progression": progression,
@@ -494,9 +869,25 @@ def analyze(data, max_hr=DEFAULT_MAX_HR):
         if all_rec_hrs:
             avg_recovery_hr = round(statistics.mean(all_rec_hrs))
 
+        interval_summary = "n/a"
+        if effort_details:
+            avg_eff_s = statistics.mean(e["duration_s"] for e in effort_details)
+            eff_paces = [parse_pace(e["avg_pace"]) for e in effort_details if parse_pace(e["avg_pace"])]
+            avg_eff_pace = pace_str(statistics.mean(eff_paces)) if eff_paces else "n/a"
+            parts = [f"{len(effort_details)} × ~{duration_str(avg_eff_s)} @ ~{avg_eff_pace}/km"]
+            if avg_effort_hr:
+                parts[0] += f" HR ~{avg_effort_hr}"
+            if recovery_details:
+                avg_rec_s = statistics.mean(r["duration_s"] for r in recovery_details)
+                rec_paces = [parse_pace(r["avg_pace"]) for r in recovery_details if parse_pace(r["avg_pace"])]
+                avg_rec_pace = pace_str(statistics.mean(rec_paces)) if rec_paces else "n/a"
+                parts.append(f"~{duration_str(avg_rec_s)} rest @ ~{avg_rec_pace}/km")
+            interval_summary = " | ".join(parts)
+
         result["structured_work"] = {
             "type": "intervals" if session_type == "intervals" else "fartlek",
             "total_efforts": len(effort_details),
+            "summary": interval_summary,
             "efforts": effort_details,
             "recoveries": recovery_details,
             "avg_effort_hr": avg_effort_hr,
@@ -536,27 +927,55 @@ def analyze(data, max_hr=DEFAULT_MAX_HR):
             "final_third": t3,
         }
 
+    # ── Notable efforts for unstructured sessions ───────────────────────────
+    # For easy/moderate/recovery/long/tempo runs, surface any fast bursts (strides, pickups)
+    if session_type in ("easy_run", "moderate_run", "recovery_run", "long_run", "tempo"):
+        effort_blocks_all = find_effort_blocks(velocity, time, threshold_factor=1.15, min_duration_s=30)
+        if effort_blocks_all:
+            notable = []
+            for i, e in enumerate(effort_blocks_all, 1):
+                seg = analyze_segment(streams, e["start_idx"], e["end_idx"])
+                seg["number"] = i
+                notable.append(seg)
+            if notable:
+                ne_paces = [parse_pace(n["avg_pace"]) for n in notable if parse_pace(n["avg_pace"])]
+                ne_summary = (
+                    f"{len(notable)} fast segment{'s' if len(notable) > 1 else ''} "
+                    f"(≥30s at ≥15% above avg) | avg pace ~{pace_str(statistics.mean(ne_paces))}/km"
+                    if ne_paces else f"{len(notable)} fast segment(s)"
+                )
+                result["notable_efforts"] = {
+                    "count": len(notable),
+                    "summary": ne_summary,
+                    "efforts": notable,
+                }
+
     return result
 
 
 # ── Entry point ───────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-    max_hr = DEFAULT_MAX_HR
+    try:
+        parsed = parse_args(sys.argv[1:])
+        max_hr = parsed["max_hr"]
+        filepath = parsed["filepath"]
+        activity_id = parsed["activity_id"]
+        env_file = Path(parsed["env_file"]).expanduser()
+        save_input = parsed["save_input"]
 
-    args = sys.argv[1:]
-    filepath = None
-    for i, arg in enumerate(args):
-        if arg == "--max-hr" and i + 1 < len(args):
-            max_hr = int(args[i + 1])
-        elif not arg.startswith("--"):
-            filepath = arg
+        if activity_id:
+            data = fetch_activity_input(activity_id, env_file)
+            if save_input:
+                Path(save_input).write_text(json.dumps(data, indent=2))
+        elif filepath:
+            with open(filepath) as f:
+                data = json.load(f)
+        else:
+            data = json.load(sys.stdin)
 
-    if filepath:
-        with open(filepath) as f:
-            data = json.load(f)
-    else:
-        data = json.load(sys.stdin)
-
-    result = analyze(data, max_hr=max_hr)
-    print(json.dumps(result, indent=2))
+        result = analyze(data, max_hr=max_hr)
+        print(json.dumps(result, indent=2))
+    except Exception as exc:
+        print(json.dumps({"error": str(exc)}), file=sys.stderr)
+        sys.exit(1)

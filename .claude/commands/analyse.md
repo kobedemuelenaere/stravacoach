@@ -11,63 +11,39 @@ If the athlete specified an activity ID, name, or date — use that. Otherwise f
 ## Step 2 — Fetch all data (in parallel)
 
 1. `mcp__strava__get-activity-details` — basic stats, description, start GPS coordinates, timestamp
-2. `mcp__strava__get-activity-streams` with:
-   - `types: ["time", "distance", "heartrate", "altitude", "velocity_smooth", "grade_smooth"]`
-   - `resolution: "high"`
-   - `points_per_page: -1` (gets ALL data, split into chunks)
-3. `mcp__strava__get-activity-laps` — lap splits
-4. Read `goals/goal_current.md` — for max HR and race context
-5. Read `recovery/activity_log.md` — for recent non-run activity context
-6. Read `athlete/fitness_baseline.md` if it exists — for context
+2. Read `goals/goal_current.md` — for max HR and race context
+3. Read `recovery/activity_log.md` — for recent non-run activity context
+4. Read `athlete/fitness_baseline.md` if it exists — for context
 
-## Step 3 — Assemble stream JSON
-
-The stream data arrives in multiple messages (metadata first, then data chunks). Collect ALL chunks and concatenate the arrays.
-
-Build this JSON and save to `/tmp/strava_streams_<activity_id>.json`:
-
-```json
-{
-  "metadata": {
-    "activity_id": "<id>",
-    "activity_name": "<name>",
-    "date": "<YYYY-MM-DD>",
-    "elapsed_time_s": <seconds>,
-    "distance_m": <meters>,
-    "total_elevation_gain": <meters>
-  },
-  "streams": {
-    "time": [...all time values concatenated across chunks...],
-    "distance": [...],
-    "heartrate": [...],
-    "altitude": [...],
-    "velocity_smooth": [...],
-    "grade_smooth": [...]
-  }
-}
-```
-
-Important: concatenate the arrays from ALL data chunks — do not use only the first chunk.
-
-## Step 4 — Run the analysis script
+## Step 3 — Run the analysis script (direct Strava fetch)
 
 Get max HR from `goals/goal_current.md` if available, otherwise use 190.
 
 ```bash
-python3 /Users/kobedemuelenaere/Programming/claudeprojects/stravacoach/scripts/analyze_streams.py /tmp/strava_streams_<activity_id>.json --max-hr <max_hr>
+python3 /Users/kobedemuelenaere/Programming/claudeprojects/stravacoach/scripts/analyze_streams.py --activity-id <activity_id> --max-hr <max_hr>
 ```
 
 Read the JSON output. This gives you:
+
 - `session_type` — detected type (hill_repeats / intervals / fartlek / tempo / long_run / easy_run / moderate_run / recovery_run)
-- `overall` — key stats including `avg_hr_adjusted` (warmup excluded), pace, elevation
+- `overall` — key stats including `avg_hr_adjusted`, `avg_hr_note`, pace, elevation
 - `hr_zones` — time in each zone post-warmup
 - `hr_drift_bpm` — cardiac drift
 - `pacing_split` — first vs second half
+- `warmup_end_seconds` — how much warmup was excluded (0 when no exclusion)
 - `hill_repeats` — per-rep ascent/descent breakdown (if hill repeats)
 - `structured_work` — per-effort and recovery breakdown (if intervals/fartlek)
 - `tempo` / `long_run` — type-specific breakdown
 
-## Step 5 — Fetch weather
+Optional when debugging segmentation:
+
+```bash
+python3 /Users/kobedemuelenaere/Programming/claudeprojects/stravacoach/scripts/analyze_streams.py --activity-id <activity_id> --max-hr <max_hr> --save-input /tmp/strava_streams_<activity_id>.json
+```
+
+Use this saved JSON only for troubleshooting; the default workflow is direct `--activity-id`.
+
+## Step 4 — Fetch weather
 
 Use WebFetch to call the Open-Meteo historical API with the activity's start coordinates and date:
 
@@ -77,15 +53,15 @@ https://archive-api.open-meteo.com/v1/archive?latitude=<lat>&longitude=<lon>&sta
 
 Match the closest hour to the activity start time. If unavailable, note it and continue.
 
-## Step 6 — Match to planned session
+## Step 5 — Match to planned session
 
 Read `plan/sessions/` for the active block. Match by session type and intent — not by date. State your reasoning clearly. If no match, say so and name what type of session this effectively was.
 
-## Step 7 — Ask for athlete notes
+## Step 6 — Ask for athlete notes
 
 If the Strava activity has a description, read it. Ask in chat: "Any RPE score or notes to add for this session?" If no response, proceed.
 
-## Step 8 — Write the three report files
+## Step 7 — Write the three report files
 
 Create folder: `sessions/YYYY-MM-DD_<slug>/`
 
@@ -98,7 +74,8 @@ Create folder: `sessions/YYYY-MM-DD_<slug>/`
 
 **Type:** [session_type from script — be specific]
 **Distance:** X.X km | **Moving time:** X:XX:XX
-**Avg pace:** X:XX /km | **Avg HR (adj):** X bpm *(warmup excluded)*
+**Avg pace:** X:XX /km | **Avg HR (adj):** X bpm
+**HR adjustment note:** [from `overall.avg_hr_note`] | **Warmup excluded:** [from `warmup_end_seconds`]s
 **Max HR:** X bpm | **Elevation gain:** X m
 **Weather:** [temp °C, wind X km/h, humidity X%, rain/no-rain — or "unavailable"]
 **Matched plan session:** [session name + date, or "unscheduled"]
@@ -112,10 +89,12 @@ Create folder: `sessions/YYYY-MM-DD_<slug>/`
 ### IF hill_repeats:
 
 **Reps completed:** X
+**Detected structure summary:** [from `hill_repeats.summary`]
 
 | Rep | Elevation gain | Distance | Time | Avg grade | Avg pace | Avg HR | Max HR |
-|---|---|---|---|---|---|---|---|
-| 1 | Xm | Xm | X:XX | X% | X:XX /km | X bpm | X bpm |
+| --- | -------------- | -------- | ---- | --------- | -------- | ------ | ------ |
+| 1   | Xm             | Xm       | X:XX | X%        | X:XX /km | X bpm  | X bpm  |
+
 ...
 
 **Descent recovery:**
@@ -130,9 +109,11 @@ Create folder: `sessions/YYYY-MM-DD_<slug>/`
 ### IF intervals or fartlek:
 
 **Total efforts:** X
+**Detected structure summary:** [from `structured_work.summary`]
 
 | Rep | Distance | Duration | Avg pace | Avg HR | Max HR |
-|---|---|---|---|---|---|
+| --- | -------- | -------- | -------- | ------ | ------ |
+
 ...
 
 **Recovery between efforts:**
@@ -149,11 +130,11 @@ Create folder: `sessions/YYYY-MM-DD_<slug>/`
 
 ### IF long_run:
 
-| Section | Distance | Avg pace | Avg HR |
-|---|---|---|---|
-| First third | | | |
-| Second third | | | |
-| Final third | | | |
+| Section      | Distance | Avg pace | Avg HR |
+| ------------ | -------- | -------- | ------ |
+| First third  |          |          |        |
+| Second third |          |          |        |
+| Final third  |          |          |        |
 
 ### IF easy_run / moderate_run / recovery_run:
 
@@ -163,16 +144,17 @@ Create folder: `sessions/YYYY-MM-DD_<slug>/`
 
 ## Heart Rate
 
-**Avg HR (adjusted, warmup excluded):** X bpm
+**Avg HR (adjusted):** X bpm
+**Adjustment rule:** [quote `overall.avg_hr_note`]
 **Max HR:** X bpm (X% of max)
 
-| Zone | Seconds | % of session |
-|---|---|---|
-| Z1 (<124 bpm) | | |
-| Z2 (124–143) | | |
-| Z3 (143–162) | | |
-| Z4 (162–175) | | |
-| Z5 (>175) | | |
+| Zone          | Seconds | % of session |
+| ------------- | ------- | ------------ |
+| Z1 (<124 bpm) |         |              |
+| Z2 (124–143)  |         |              |
+| Z3 (143–162)  |         |              |
+| Z4 (162–175)  |         |              |
+| Z5 (>175)     |         |              |
 
 **HR drift:** [+/- X bpm from script — is this significant?]
 
@@ -201,18 +183,23 @@ Coaching voice — honest, constructive, specific. Based on the analysis output.
 ---
 
 ## Against the plan
+
 [Was the intent met? What was on target, what wasn't? Compare actual to prescription.]
 
 ## Effort assessment
+
 [Was effort appropriate for this session type? Based on HR zones, progression, type-specific data.]
 
 ## What you did well
+
 [Specific positives — reference actual numbers from the analysis]
 
 ## What to work on
+
 [Specific, actionable — one or two things, not a list of everything]
 
 ## Verdict
+
 [Yes / Mostly / Partially / No — did you nail the session intent? One sentence.]
 ```
 
@@ -223,6 +210,7 @@ Coaching voice — honest, constructive, specific. Based on the analysis output.
 Only write genuine flags. If nothing warrants a warning, write: `No warnings for this session.`
 
 Genuine warning triggers:
+
 - Easy run with sustained Z3+ HR
 - HR above 95% max for extended period (>3 min)
 - Effort pace fading significantly across intervals/reps (>8% drop)
@@ -234,6 +222,7 @@ Genuine warning triggers:
 # Warnings — [Activity Name] ([Date])
 
 ## [Warning title]
+
 [What the data shows, why it's a flag, what to watch for]
 ```
 
@@ -243,13 +232,14 @@ Genuine warning triggers:
 
 "How did you feel? Any aches, observations, or notes to log?" Save to `sessions/YYYY-MM-DD_<slug>/athlete_feedback.md` if they respond.
 
-## Step 10 — Clean up and report back
+## Step 8 — Ask about athlete feedback
 
-```bash
-rm /tmp/strava_streams_<activity_id>.json
-```
+"How did you feel? Any aches, observations, or notes to log?" Save to `sessions/YYYY-MM-DD_<slug>/athlete_feedback.md` if they respond.
+
+## Step 9 — Report back
 
 Tell the athlete:
+
 1. Session type detected and matched plan session
 2. The key finding (1–2 sentences from the analysis — most interesting insight)
 3. Any warnings, plainly stated
