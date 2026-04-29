@@ -19,8 +19,8 @@ Always invoke the right command for what you want to do. Each one has full instr
 
 ## Data sources
 
-- **Strava MCP** — activity details, streams (pace/HR/elevation/cadence at ~10s resolution), laps, athlete profile
-- **Weather API** — temperature, wind, humidity, rain at the GPS start point and timestamp of the activity (used in session analysis)
+- **Strava MCP** (`mcp__strava__*`) — the sole source for all activity data: details, streams (pace/HR/elevation/cadence at ~10s resolution), laps, athlete profile. Always use these tools directly. **Never use the GetFast API (`mcp__claude_ai_getfast__*`) for activity data** — that is a separate service and not used in this project.
+- **Weather API (Open-Meteo)** — temperature, wind, humidity, rain at the GPS start point and timestamp of the activity (used in session analysis). Plain HTTP call via WebFetch — no MCP needed.
 - **Athlete feedback** — your own notes, RPE, how you felt — logged via `/analyse` or `/recovery`
 
 ## File structure
