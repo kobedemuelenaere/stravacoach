@@ -62,6 +62,27 @@
 - **Volume progression:** Current ~20 km/week is low-to-moderate. Will build gradually toward 25–30 km/week in June–July, with a taper in the final weeks before July 20.
 - **No race goal:** This is performance-oriented, not race-time focused. Success is capability and confidence on the mountain, not a clock.
 
+## HR Zones
+
+Afgeleid van fysiologische ankerpunten uit sessies april 2026 (bijgewerkt 2026-04-29):
+
+| Zone | Naam | BPM | Looptempo (richtlijn) | Gevoel |
+|---|---|---|---|---|
+| Zone 1 | Herstel | < 130 | > 7:30 /km | Wandeltempo, geen moeite |
+| Zone 2 | Aëroob basis | 130–148 | 7:00–7:30 /km | Vrij gesprek, licht |
+| Zone 3 | Aangehouden tempo | 148–162 | 6:10–6:50 /km | Korte zinnen, gecontroleerd |
+| Zone 4 | Drempel | 162–174 | 5:30–6:10 /km | Moeilijk spreken, pittig |
+| Zone 5 | Maximaal | 174+ | < 5:30 /km of klimmen | Enkel sprints/steil |
+
+**Max HR aanname: ~185 bpm** (gebaseerd op piek van 178 bpm op Sabbeberg = geschatte 96% van max).
+
+**Ankerpunten:**
+- LT2 (drempel): 162–165 bpm bij 5:39 /km (testloopje 15/04)
+- VO2max spikes: 172–178 bpm (intervals + heuvelherhalingen)
+- "Lange duurloop" op 6:17 /km = gemiddeld 156 bpm → dat is Z3, geen Z2
+
+**Praktische implicatie:** Een echte Z2 herstelloop vereist 7:00–7:30+ /km. Het tempo dat voelt als "rustig" (±6:15–6:30 /km) is effectief Z3 tempowerk.
+
 ## Goal Set
 
 April 29, 2026

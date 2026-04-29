@@ -1,0 +1,391 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//StravaCoach//Training Plan//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:StravaCoach Training Plan
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VTIMEZONE
+TZID:Europe/Brussels
+BEGIN:DAYLIGHT
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+END:DAYLIGHT
+BEGIN:STANDARD
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:stravacoach-2026-04-16-duurloop@stravacoach
+DTSTAMP:20260429T140820Z
+DTSTART;TZID=Europe/Brussels:20260416T180000
+DTEND;TZID=Europe/Brussels:20260416T191500
+SUMMARY:✓ 6km – Rustige Duurloop + Strides
+DESCRIPTION:✓ VOLTOOID\n\n# Sessie: 6km – Rustige Duurloop + Strides\n\
+ n**Datum:** do 16 april 2026\, 18:00–19:15  \n**Blok:** 1 — Aerobe Bas
+ is  \n**Week:** 1  \n**Type:** Duurloop  \n**Afstand:** 6 km  \n**Duur:** 
+ ~1u15  \n**Status:** Historisch (week 1)\n**Voltooid:** ja — 2026-04-15 
+ testloopje (5.53km\, tempo — snellere sessie als vervanging)\n\n## Doel\
+ n\nGecontroleerde aerobe loop met strides ter afsluiting. Voortbouwen op h
+ uidig ritme — geen verrassingen\, gewoon bewegen.\n\n## Intentie\n\nDit 
+ is de eerste sessie van het schema. De strides aan het einde prikkelen neu
+ romusculaire coördinatie zonder de aerobe belasting te verhogen. Zone 2 d
+ e hele weg.\n\n## Uitvoering\n\n**Opwarming (10 min)**\n\n- 5 min wandelen
+ \n- 5 min heel rustig inlopen (RPE 3)\n\n**Kern (30 min)**\n\n- 5 km rusti
+ g doorlopen\n- Tempo: 7:00–7:15/km\n- Hartslag: Zone 2 (135–152 bpm)\n
+ - RPE: 4 — makkelijk kunnen praten\n- Focus: ontspannen schouders\, kort
+ e pas\, lichte voetlanding\n\n**Strides (na de loop)**\n\n- 4 × 20 sec ve
+ rsnellen tot ~85% sprint\n- 60 sec wandelherstel tussen elke stride\n- Nie
+ t sprinten — snel en vloeiend\n\n**Cooling down (5 min)**\n\n- Rustig ui
+ tlopen + wandelen\n\n## Richtwaarden\n\n| Parameter | Richtlijn           
+  |\n| --------- | -------------------- |\n| Tempo     | 7:00–7:15/km    
+      |\n| Hartslag  | 135–152 bpm (Zone 2) |\n| RPE       | 4           
+          |\n| Strides   | 4 × 20 sec op ~85%   |\n\n## Coach-noot\n\nWeek
+  1 is een instapweek. Dit moet aanvoelen als een stevige wandeling in loop
+ pas. Als het zwaar voelt\, ga dan trager — de hartslag is de maatstaf\, 
+ niet het tempo.\n
+STATUS:COMPLETED
+END:VEVENT
+BEGIN:VEVENT
+UID:stravacoach-2026-04-19-lange-duurloop@stravacoach
+DTSTAMP:20260429T140820Z
+DTSTART;TZID=Europe/Brussels:20260419T090000
+DTEND;TZID=Europe/Brussels:20260419T104500
+SUMMARY:✓ 11km – Lange Duurloop
+DESCRIPTION:✓ VOLTOOID\n\n# Sessie: 11km – Lange Duurloop\n\n**Datum:**
+  zo 19 april 2026\, 09:00–10:45  \n**Blok:** 1 — Aerobe Basis  \n**Wee
+ k:** 1  \n**Type:** Lange duurloop  \n**Afstand:** 11 km  \n**Duur:** ~1u4
+ 5  \n**Status:** Historisch (week 1)\n**Voltooid:** ja — 2026-04-18 dwar
+ s-door-de-duinen (11.15km)\n\n## Doel\n\nEerste lange loop van het schema.
+  Voortbouwen op 10.3 km van de week ervoor. Bewust rustig houden — tijd 
+ op de benen opbouwen\, niet snelheid.\n\n## Intentie\n\nDe lange loop is h
+ et fundament van elke trainingsweek. In week 1 gaat het puur om aeroob vol
+ ume. Splits moeten gelijkmatig zijn — liever negatief splitsen (laatste 
+ km's iets sneller) dan wegschieten en vertragen.\n\n## Uitvoering\n\n**Opw
+ arming (8 min)**\n\n- 3 min wandelen\n- 5 min heel rustig inlopen\n\n**Ker
+ n (60–65 min)**\n\n- 11 km constant rustig tempo\n- Tempo: 7:00–7:20/k
+ m\n- Hartslag: Zone 2 (135–152 bpm)\, liefst onder 150\n- RPE: 4 — con
+ versatietempo\n- Eerste 3 km bewust trager dan je wilt\n- Splits moeten ge
+ lijkmatig zijn of licht negatief\n\n**Cooling down (8 min)**\n\n- 5 min ru
+ stig uitlopen\n- 3 min wandelen\n\n## Richtwaarden\n\n| Parameter    | Ric
+ htlijn                |\n| ------------ | ------------------------ |\n| Te
+ mpo        | 7:00–7:20/km             |\n| Hartslag     | 135–150 bpm 
+ (Zone 2)     |\n| RPE          | 4                        |\n| Gevoel eind
+ e | "Ik kon nog 3 km verder" |\n\n## Coach-noot\n\nNeem water mee als het 
+ warm is. Begin gewoon te wennen aan drinken tijdens het lopen — in de be
+ rgen is dat essentieel. Het gevoel "ik kon nog verder" is het succescriter
+ ium\, niet de tijd.\n
+STATUS:COMPLETED
+END:VEVENT
+BEGIN:VEVENT
+UID:stravacoach-2026-04-22-fartlek@stravacoach
+DTSTAMP:20260429T140820Z
+DTSTART;TZID=Europe/Brussels:20260422T180000
+DTEND;TZID=Europe/Brussels:20260422T191500
+SUMMARY:✓ 7km – Fartlek
+DESCRIPTION:✓ VOLTOOID\n\n# Sessie: 7km – Fartlek\n\n**Datum:** wo 22 a
+ pril 2026\, 18:00–19:15  \n**Blok:** 1 — Aerobe Basis  \n**Week:** 2  
+ \n**Type:** Fartlek  \n**Afstand:** 7 km  \n**Duur:** ~1u15  \n**Status:**
+  Historisch (week 2)\n**Voltooid:** ja — 2026-04-20 namiddagloop (5.52km
+ \, 5×~2min intervals — ingekort wegens tijd)\n\n## Doel\n\nFartlek ("va
+ artspel") — speelse tempowisselingen om het lichaam te leren schakelen t
+ ussen inspanningsniveaus. Geen strak schema\, wel gecontroleerde versnelli
+ ngen.\n\n## Intentie\n\nIn de bergen wissel je constant tussen steil en vl
+ ak\, hard en rustig. Fartlek traint precies dat schakelvermogen zonder de 
+ stijfheid van strakke intervallen. De kern is speels — gebruik omgevings
+ markeringen (lantaarnpalen\, bomen\, kruispunten) als ankerpunten.\n\n## U
+ itvoering\n\n**Opwarming (12 min)**\n\n- 3 min wandelen\n- 7 min rustig in
+ lopen (7:15–7:30/km)\n- 2 min iets sneller om de benen wakker te maken\n
+ \n**Kern — Fartlek (30 min)**\n\n- Totaal ~5 km met tempowisselingen\n- 
+ Structuur: 1–2 min sneller → 2–3 min rustig\, herhalen\n- Snellere s
+ tukken: 5:50–6:10/km (RPE 6–7)\n- Rustige stukken: 7:00–7:20/km (RPE
+  4)\n- Hartslag snelle stukken: tot Zone 3–4 (155–170 bpm)\n- Hartslag
+  rust: terug naar Zone 2 (<152 bpm)\n- 6–8 versnellingen in totaal\n\n**
+ Cooling down (8 min)**\n\n- 5 min heel rustig uitlopen\n- 3 min wandelen\n
+ \n## Richtwaarden\n\n| Parameter         | Richtlijn                      
+    |\n| ----------------- | --------------------------------- |\n| Snelle 
+ stukken    | 5:50–6:10/km\, RPE 6–7             |\n| Rustige stukken  
+  | 7:00–7:20/km\, RPE 4               |\n| HR snelle stukken | 155–170
+  bpm                       |\n| Herstel check     | Na 2 min rust: HR teru
+ g onder 152 |\n\n## Coach-noot\n\nKwaliteitsindicator: na elke versnelling
+  moet je binnen 2 min weer op adem zijn. Als dat niet lukt\, waren de vers
+ nellingen te hard of te lang. Fartlek is een gesprek met je lichaam — ga
+  niet racen.\n
+STATUS:COMPLETED
+END:VEVENT
+BEGIN:VEVENT
+UID:stravacoach-2026-04-25-lange-duurloop@stravacoach
+DTSTAMP:20260429T140820Z
+DTSTART;TZID=Europe/Brussels:20260425T090000
+DTEND;TZID=Europe/Brussels:20260425T104500
+SUMMARY:✓ 12km – Lange Duurloop
+DESCRIPTION:✓ VOLTOOID\n\n# Sessie: 12km – Lange Duurloop\n\n**Datum:**
+  za 25 april 2026\, 09:00–10:45  \n**Blok:** 1 — Aerobe Basis  \n**Wee
+ k:** 2  \n**Type:** Lange duurloop  \n**Afstand:** 12 km  \n**Duur:** ~1u4
+ 5  \n**Status:** Historisch (week 2)\n**Voltooid:** ja — 2026-04-25 3-ka
+ stelen (12.12km)\n\n## Doel\n\nVolume verder opbouwen — +1 km ten opzich
+ te van vorige week. Geduldig en gelijkmatig.\n\n## Intentie\n\nDe lange lo
+ op groeit wekelijks met 1 km. Het doel is niet tempo maar duur — je trai
+ nt het vetmetabolisme en de tijd op de benen. Negatief splitsen is het ide
+ aal: eerste helft iets trager dan de tweede.\n\n## Uitvoering\n\n**Opwarmi
+ ng (8 min)**\n\n- 3 min wandelen\n- 5 min rustig inlopen\n\n**Kern (68–7
+ 5 min)**\n\n- 12 km constant rustig tempo\n- Tempo: 6:55–7:15/km\n- Hart
+ slag: Zone 2 (135–152 bpm)\n- RPE: 4\n- Houd je in de eerste helft — s
+ plits gelijk of licht negatief\n- Neem water mee\n\n**Cooling down (8 min)
+ **\n\n- 5 min uitlopen\n- 3 min wandelen + stretchen\n\n## Richtwaarden\n\
+ n| Parameter     | Richtlijn                |\n| ------------- | ---------
+ --------------- |\n| Tempo         | 6:55–7:15/km             |\n| Harts
+ lag      | 135–152 bpm (Zone 2)     |\n| RPE           | 4              
+           |\n| Splitspatroon | Gelijk of licht negatief |\n\n## Coach-noot
+ \n\n12 km rustig is ~75 min bewegen. In de bergen loop je 6–8 uur. Elke 
+ minuut aeroob werk bouwt de motor. Consistent volume op lage intensiteit i
+ s de snelste weg naar een betere aerobe basis.\n
+STATUS:COMPLETED
+END:VEVENT
+BEGIN:VEVENT
+UID:stravacoach-2026-04-29-interval@stravacoach
+DTSTAMP:20260429T140820Z
+DTSTART;TZID=Europe/Brussels:20260429T180000
+DTEND;TZID=Europe/Brussels:20260429T192000
+SUMMARY:✓ 7km – Intervaltraining 5×3min
+DESCRIPTION:✓ VOLTOOID\n\n# Sessie: 7km – Intervaltraining 5×3min\n\n*
+ *Datum:** wo 29 april 2026\, 18:00–19:20  \n**Blok:** 1 — Aerobe Basis
+   \n**Week:** 3  \n**Type:** Interval  \n**Afstand:** 7 km  \n**Duur:** ~1
+ u20  \n**Status:** Optioneel — vandaag\n**Voltooid:** ja — 2026-04-27 
+ avondloop (7.02km\, 6×~2:30 intervals)\n\n## Doel\n\nEerste echte interva
+ ltraining. Gestructureerde inspanningen om VO2max te prikkelen en tempogre
+ nzen te verleggen.\n\n## Intentie\n\nIntervaltraining werkt anders dan far
+ tlek: de inspanningen zijn strakker afgebakend en het herstel is gemeten. 
+ 3 minuten is de sweet spot voor VO2max-prikkeling — lang genoeg om het s
+ ysteem te belasten\, kort genoeg om kwaliteit te bewaren. Begin gecontrole
+ erd\, bouw op naar interval 4–5.\n\n## Uitvoering\n\n**Opwarming (15 min
+ )**\n\n- 3 min wandelen\n- 8 min rustig inlopen (7:00–7:15/km)\n- 4 min 
+ geleidelijk opbouwen naar stevig tempo\n- Optioneel: 2 × 15 sec stride\n\
+ n**Kern — 5 × 3 min**\n\n- Tempo: 5:40–5:55/km\n- Herstel: 2 min rust
+ ig joggen (7:30+/km) tussen elke herhaling\n- Hartslag werk: Zone 4 (164
+ –174 bpm)\n- Hartslag herstel: terug naar <155 bpm voor volgende interva
+ l\n- RPE werk: 7 — korte zinnen mogelijk\, maar niet comfortabel\n- Begi
+ n eerste twee iets rustiger\, bouw op\n- Interval 5 mag de snelste zijn\n\
+ n**Cooling down (10 min)**\n\n- 5 min heel rustig joggen\n- 3 min wandelen
+ \n- 2 min stretchen (kuiten\, hamstrings\, quadriceps)\n\n## Richtwaarden\
+ n\n| Parameter             | Richtlijn            |\n| -------------------
+ -- | -------------------- |\n| Intervaltempo         | 5:40–5:55/km     
+     |\n| Herstelopportuniteit  | 2 min joggen         |\n| HR tijdens werk
+        | 164–174 bpm (Zone 4) |\n| HR bij volgende start | <155 bpm     
+         |\n| RPE                   | 7                    |\n\n## Succescr
+ iterium\n\nNa elke interval het gevoel: "Ik kon er nog eentje doen." Als j
+ e op je tandvlees loopt na interval 3\, was het tempo te hoog.\n\n## Coach
+ -noot\n\nVO2max-verhoging = efficiënter ademhalen op hoogte. Dit is de in
+ vestering voor de Dolomieten. 5 intervallen is genoeg voor week 3 — volg
+ ende keer in Blok 2 worden het er 6 met korter herstel.\n
+STATUS:COMPLETED
+END:VEVENT
+BEGIN:VEVENT
+UID:stravacoach-2026-04-30-heuvel@stravacoach
+DTSTAMP:20260429T140820Z
+DTSTART;TZID=Europe/Brussels:20260430T180000
+DTEND;TZID=Europe/Brussels:20260430T193000
+SUMMARY:Heuvelloop/Wandeling 100–200hm (optioneel)
+DESCRIPTION:# Sessie: Heuvelloop/Wandeling 100–200hm (optioneel)\n\n**Dat
+ um:** do 30 april 2026\, 18:00–19:30  \n**Blok:** 1 — Aerobe Basis  \n
+ **Week:** 3  \n**Type:** Heuvel  \n**Hoogtemeters:** 100–200 hm  \n**Duu
+ r:** ~1u30  \n**Status:** Optioneel\n**Voltooid:** nee\n\n## Doel\n\nEerst
+ e bewuste heuvelsessie. Hoogtemeters maken en bergspecifieke bewegingspatr
+ onen inslijpen.\n\n## Intentie\n\nHoogtemeters maken is directe bergvoorbe
+ reiding. Zoek een route van 8–10 km met 100–200 hm. Combinatie van lop
+ en en wandelen is prima — het gaat om de vertikale meter\, niet om snelh
+ eid. De technieken voor bergop en bergaf zijn even belangrijk als de belas
+ ting zelf.\n\n## Uitvoering\n\n**Bergop-focus**\n\n- Verkort je pas naarma
+ te het steiler wordt\n- Leun licht voorover vanuit de enkels (niet het mid
+ del)\n- Duw af met de hele voet\n- Handen op knieën bij steil terrein (be
+ rgwandelaarstechniek)\n- Adem uit op ritme: elke 3 stappen krachtig uitade
+ men\n- RPE 5–6 — je ademt dieper maar het is geen gevecht\n- Hartslag 
+ tot Zone 3 (152–164 bpm)\n\n**Bergaf-focus**\n\n- Knieën licht gebogen\
+ n- Kleine\, snelle passen\n- Niet remmen met hakken — hele voet gebruike
+ n\n- Rustig joggen\, Zone 2 bergaf\n\n## Richtwaarden\n\n| Parameter    | 
+ Richtlijn                     |\n| ------------ | ------------------------
+ ----- |\n| Hoogtemeters | 100–200 hm                    |\n| HR bergop  
+   | Tot Zone 3 (152–164)          |\n| HR bergaf    | Zone 2 (<152)     
+             |\n| RPE bergop   | 5–6                           |\n| Loopt
+ echniek | Korte passen\, vooroverleunend |\n\n## Coach-noot\n\nDit is week
+  3 van het schema. De helling hoeft niet groot te zijn — zelfs 100 hm op
+  een heuvelachtige route van 8 km is waardevol. Elke heuvelsessie bouwt de
+  specifieke bergbeenspieren die je in de Dolomieten nodig hebt. Sla gerust
+  over als je moe bent van de intervallen gisteren.\n
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:stravacoach-2026-05-02-lange-duurloop@stravacoach
+DTSTAMP:20260429T140820Z
+DTSTART;TZID=Europe/Brussels:20260502T090000
+DTEND;TZID=Europe/Brussels:20260502T110000
+SUMMARY:14km – Lange Duurloop
+DESCRIPTION:# Sessie: 14km – Lange Duurloop\n\n**Datum:** za 2 mei 2026\,
+  09:00–11:00  \n**Blok:** 1 — Aerobe Basis  \n**Week:** 3  \n**Type:**
+  Lange duurloop  \n**Afstand:** 14 km  \n**Duur:** ~2u  \n**Status:** Gepl
+ and\n**Voltooid:** nee\n\n## Doel\n\nNieuw trainings-PR: 14 km. Puur aerob
+ e opbouw — rustig en geduldig. Dit is de langste loop tot nu toe.\n\n## 
+ Intentie\n\n14 km op Zone 2 is een serieuze aeroob prikkel. Het gaat om ti
+ jd op de benen opbouwen\, niet om snelheid. Voeding en drinken beginnen ee
+ n rol te spelen bij looptijden boven 75 min — dit is het moment om dat t
+ e beginnen oefenen voor de bergen.\n\n## Uitvoering\n\n**Opwarming (8 min)
+ **\n\n- 3 min wandelen\n- 5 min heel rustig inlopen\n\n**Kern (80–90 min
+ )**\n\n- 14 km constant tempo\n- Tempo: 6:55–7:15/km\n- Hartslag: Zone 2
+  (135–152 bpm)\n- RPE: 4 — conversatietempo de hele loop\n- Km 1–5: 
+ bewust rustig inhouden\n- Km 5–10: ritme vasthouden\n- Km 10–14: als h
+ et goed gaat\, mag je licht versnellen (niet onder 6:40/km)\n\n**Voeding e
+ n drinken**\n\n- 300–500 ml water mee\n- Overweeg een klein tussendoortj
+ e rond km 9 (banaan\, dadels) als je langer dan 75 min loopt\n- Experiment
+ eer — in de bergen moet je constant eten\n\n**Cooling down (10 min)**\n\
+ n- 5 min rustig uitlopen\n- 5 min wandelen + stretchen (kuiten\, hamstring
+ s\, heupen)\n\n## Richtwaarden\n\n| Parameter | Richtlijn                 
+   |\n| --------- | --------------------------- |\n| Tempo     | 6:55–7:1
+ 5/km                |\n| Hartslag  | 135–152 bpm (Zone 2)        |\n| RP
+ E       | 4\, mag in km 11–14 naar 5   |\n| Grens     | Als HR boven 155
+ : vertragen |\n\n## Succescriterium\n\nLoop afgerond op Zone 2 zonder de h
+ artslag te moeten "bewaken". Als de HR de hele loop onder 152 blijft zonde
+ r moeite\, is de aerobe basis groeiend.\n\n## Coach-noot\n\n14 km = ~85 mi
+ n op de benen. Dit is een grote stap richting halve marathon én richting 
+ lange bergdagen. Voeding meenemen en testen is net zo belangrijk als de ki
+ lometers zelf.\n
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:stravacoach-2026-05-03-kracht@stravacoach
+DTSTAMP:20260429T140820Z
+DTSTART;TZID=Europe/Brussels:20260503T100000
+DTEND;TZID=Europe/Brussels:20260503T104500
+SUMMARY:Kracht & Stabiliteit – Bergfocus
+DESCRIPTION:# Sessie: Kracht & Stabiliteit – Bergfocus\n\n**Datum:** zo 3
+  mei 2026\, 10:00–10:45  \n**Blok:** 1 — Aerobe Basis  \n**Week:** 3  
+ \n**Type:** Kracht  \n**Duur:** ~45 min  \n**Status:** Gepland\n**Voltooid
+ :** nee\n\n## Doel\n\nFunctionele krachttraining gericht op bergsterkte. L
+ ichaamsgewicht of minimaal materiaal. 30–40 min is genoeg.\n\n## Intenti
+ e\n\nKrachtsessies in Blok 1 leggen een basisniveau in de spiergroepen die
+  bij bergactiviteiten het meest belast worden: kuiten (bergaf afdaling)\, 
+ quadriceps (excentrisch bij dalen)\, glutes (klimkracht)\, en core (stabil
+ iteit op ongelijk terrein). 3 rondes\, focus op kwaliteit van beweging —
+  niet op gewicht.\n\n## Circuit — 3 rondes (60 sec rust tussen rondes)\n
+ \n| #   | Oefening                  | Reps         | Focus                
+                              |\n| --- | ------------------------- | ------
+ ------ | ------------------------------------------------- |\n| 1   | Step
+ -ups op bank/trap     | 12 per been  | Bergopwaarts simulatie. Duw af vanu
+ it hele voet   |\n| 2   | Bulgaarse split squat     | 10 per been  | Eenbe
+ nige kracht en balans. Romp recht houden     |\n| 3   | Kuitverheffingen (
+ staand) | 15× langzaam | 2 sec omhoog\, 3 sec omlaag — achilestendonpri
+ kkel |\n| 4   | Plank                     | 45 sec       | Rompstabiliteit
+  voor ongelijk terrein             |\n| 5   | Dead bugs                 | 
+ 10 per kant  | Core-activatie en coördinatie                     |\n| 6  
+  | Zijwaartse lunges         | 10 per been  | Laterale stabiliteit voor te
+ chnische paden        |\n\n**Warming-up (5 min)**\n\n- Heupdraaien\, beenz
+ waaien\, lichte squats\n\n**Cooling down (5 min)**\n\n- 90/90 heupsstretch
+ \, duivenhouding\n- Kuitstretch\n- Quadricepsstretch\n\n## Coach-noot\n\nF
+ requentie: 1–2× per week. Niet op dezelfde dag als een zware loopsessie
+ . Zondag na de zaterdag-lange loop is ideaal — de benen zijn al belast m
+ aar niet vers\, dus de prikkel is gericht. De oefeningen zien er simpel ui
+ t maar de bergspecifieke toepassing (step-ups\, split squat op helling) ma
+ akt het verschil.\n
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:stravacoach-2026-05-06-duurloop@stravacoach
+DTSTAMP:20260429T140820Z
+DTSTART;TZID=Europe/Brussels:20260506T180000
+DTEND;TZID=Europe/Brussels:20260506T190000
+SUMMARY:6km – Rustige Duurloop + Strides (Teruglaadweek)
+DESCRIPTION:# Sessie: 6km – Rustige Duurloop + Strides (Teruglaadweek)\n\
+ n**Datum:** wo 6 mei 2026\, 18:00–19:00  \n**Blok:** 1 — Aerobe Basis 
+  \n**Week:** 4 — Teruglaadweek  \n**Type:** Duurloop  \n**Afstand:** 6 k
+ m  \n**Duur:** ~1u  \n**Status:** Gepland\n**Voltooid:** nee\n\n## Doel\n\
+ nActief herstel. Licht en ontspannen lopen met een paar strides om het loo
+ pgevoel scherp te houden.\n\n## Intentie\n\nTeruglaadweken zijn essentieel
+ : spiervezels repareren\, glycogeen vult aan\, pezen verstevigen. Dit is g
+ een luiheid — het is slim trainen. De strides houden de neuromusculaire 
+ activatie intact zonder de herstelstatus te verstoren.\n\n## Uitvoering\n\
+ n**Opwarming (8 min)**\n\n- 3 min wandelen\n- 5 min rustig inlopen\n\n**Ke
+ rn (28 min)**\n\n- 5 km rustig doorlopen\n- Tempo: 7:00–7:20/km\n- Harts
+ lag: Zone 1–2 (<148 bpm)\n- RPE: 3–4 — echt gemakkelijk\n\n**Strides
+ **\n\n- 4 × 20 sec versnellen (85% sprint)\n- 60 sec wandelherstel\n\n**C
+ ooling down (5 min)**\n\n- Rustig uitlopen\n\n## Richtwaarden\n\n| Paramet
+ er | Richtlijn                       |\n| --------- | --------------------
+ ----------- |\n| Tempo     | 7:00–7:20/km                    |\n| Hartsl
+ ag  | <148 bpm (Zone 1–2)             |\n| RPE       | 3–4            
+                  |\n| Intentie  | Frisser vertrekken dan aankomen |\n\n## 
+ Coach-noot\n\nNa 3 weken opbouw heeft het lichaam rust nodig. De verleidin
+ g om "er nog wat uit te halen" overwinnen is even belangrijk als de traini
+ ng zelf. Het plan past zich aan na deze week — Blok 2 begint met hogere 
+ intensiteit.\n
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:stravacoach-2026-05-09-lange-duurloop@stravacoach
+DTSTAMP:20260429T140820Z
+DTSTART;TZID=Europe/Brussels:20260509T090000
+DTEND;TZID=Europe/Brussels:20260509T103000
+SUMMARY:12km – Rustige Duurloop (Teruglaadweek)
+DESCRIPTION:# Sessie: 12km – Rustige Duurloop (Teruglaadweek)\n\n**Datum:
+ ** za 9 mei 2026\, 09:00–10:30  \n**Blok:** 1 — Aerobe Basis  \n**Week
+ :** 4 — Teruglaadweek  \n**Type:** Lange duurloop  \n**Afstand:** 12 km 
+  \n**Duur:** ~1u30  \n**Status:** Gepland\n**Voltooid:** nee\n\n## Doel\n\
+ nRustige lange loop op gereduceerd volume. 12 km in plaats van 14+. Puur a
+ erobe herstelrun — bewust minder\, bewust rustiger.\n\n## Intentie\n\nNa
+  de 14 km van week 3 is 12 km een bewuste afbouw. Het volume daalt\, de ha
+ rtslag mag zelfs iets lager dan normaal. Dit is geen inzinking — het is 
+ de teruglaadweek die maakt dat het lichaam sterker uit Blok 1 komt dan het
+  ingegaan is.\n\n## Uitvoering\n\n**Opwarming (8 min)**\n\n- 3 min wandele
+ n\n- 5 min rustig inlopen\n\n**Kern (68–75 min)**\n\n- 12 km constant en
+  rustig\n- Tempo: 7:00–7:20/km\n- Hartslag: Zone 2 (135–150 bpm) — l
+ iefst onder 148\n- RPE: 4 — gemakkelijk lopen\n\n**Cooling down (8 min)*
+ *\n\n- 5 min uitlopen\n- 3 min wandelen + stretchen\n\n## Richtwaarden\n\n
+ | Parameter | Richtlijn                    |\n| --------- | --------------
+ -------------- |\n| Tempo     | 7:00–7:20/km                 |\n| Hartsl
+ ag  | 135–148 bpm                  |\n| RPE       | 4                   
+          |\n| Gevoel    | Licht — geniet van het lopen |\n\n## Coach-noo
+ t\n\nDit is de laatste lange loop van Blok 1. Na deze week start Blok 2 me
+ t hogere intensiteit. Geniet van de rust — volgende week wordt het pitti
+ ger.\n
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:stravacoach-2026-05-10-kracht@stravacoach
+DTSTAMP:20260429T140820Z
+DTSTART;TZID=Europe/Brussels:20260510T100000
+DTEND;TZID=Europe/Brussels:20260510T104000
+SUMMARY:Kracht & Stabiliteit – Licht Onderhoud (Teruglaadweek)
+DESCRIPTION:# Sessie: Kracht & Stabiliteit – Licht Onderhoud (Teruglaadwe
+ ek)\n\n**Datum:** zo 10 mei 2026\, 10:00–10:40  \n**Blok:** 1 — Aerobe
+  Basis  \n**Week:** 4 — Teruglaadweek  \n**Type:** Kracht  \n**Duur:** ~
+ 40 min  \n**Status:** Gepland\n**Voltooid:** nee\n\n## Doel\n\nLichte krac
+ htonderhoud. Zelfde oefeningen als week 3\, minder volume — 2 rondes in 
+ plaats van 3.\n\n## Intentie\n\nKracht niet laten zakken tijdens de terugl
+ aadweek\, maar ook het herstelproces niet verstoren. 2 rondes is genoeg om
+  de neuromusculaire verbindingen actief te houden.\n\n## Circuit — 2 ron
+ des (minder dan normaal)\n\n| #   | Oefening              | Reps        |\
+ n| --- | --------------------- | ----------- |\n| 1   | Step-ups op bank/t
+ rap | 10 per been |\n| 2   | Bulgaarse split squat | 8 per been  |\n| 3   
+ | Kuitverheffingen      | 12×         |\n| 4   | Plank                 | 
+ 40 sec      |\n| 5   | Dead bugs             | 8 per kant  |\n| 6   | Zijw
+ aartse lunges     | 8 per been  |\n\n**Extra mobiliteit (10 min)**\n\n- He
+ upmobiliteit: 90/90 stretch\, duivenhouding\n- Enkelmobiliteit: cirkels en
+  dorsiflexie\n- Bovenrugmobiliteit\n\n## Coach-noot\n\nDit is het einde va
+ n Blok 1. Reflecteer na de sessie: hoe voelen de benen? Zijn er pijntjes d
+ ie aandacht nodig hebben voor Blok 2 start? Blok 2 begint 13 mei — dan g
+ aan de tempolopen van start.\n
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:stravacoach-2026-07-20-goal@stravacoach
+DTSTAMP:20260429T140820Z
+DTSTART;VALUE=DATE:20260720
+DTEND;VALUE=DATE:20260721
+SUMMARY:🎯 Mountain hiking in the Dolomites
+DESCRIPTION:Doeldatum: Mountain hiking in the Dolomites
+END:VEVENT
+END:VCALENDAR
