@@ -24,7 +24,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:stravacoach-2026-04-16-duurloop@stravacoach
-DTSTAMP:20260429T140820Z
+DTSTAMP:20260429T141455Z
 DTSTART;TZID=Europe/Brussels:20260416T180000
 DTEND;TZID=Europe/Brussels:20260416T191500
 SUMMARY:✓ 6km – Rustige Duurloop + Strides
@@ -55,7 +55,7 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-04-19-lange-duurloop@stravacoach
-DTSTAMP:20260429T140820Z
+DTSTAMP:20260429T141455Z
 DTSTART;TZID=Europe/Brussels:20260419T090000
 DTEND;TZID=Europe/Brussels:20260419T104500
 SUMMARY:✓ 11km – Lange Duurloop
@@ -86,7 +86,7 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-04-22-fartlek@stravacoach
-DTSTAMP:20260429T140820Z
+DTSTAMP:20260429T141455Z
 DTSTART;TZID=Europe/Brussels:20260422T180000
 DTEND;TZID=Europe/Brussels:20260422T191500
 SUMMARY:✓ 7km – Fartlek
@@ -122,7 +122,7 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-04-25-lange-duurloop@stravacoach
-DTSTAMP:20260429T140820Z
+DTSTAMP:20260429T141455Z
 DTSTART;TZID=Europe/Brussels:20260425T090000
 DTEND;TZID=Europe/Brussels:20260425T104500
 SUMMARY:✓ 12km – Lange Duurloop
@@ -151,7 +151,7 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-04-29-interval@stravacoach
-DTSTAMP:20260429T140820Z
+DTSTAMP:20260429T141455Z
 DTSTART;TZID=Europe/Brussels:20260429T180000
 DTEND;TZID=Europe/Brussels:20260429T192000
 SUMMARY:✓ 7km – Intervaltraining 5×3min
@@ -189,41 +189,43 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-04-30-heuvel@stravacoach
-DTSTAMP:20260429T140820Z
+DTSTAMP:20260429T141455Z
 DTSTART;TZID=Europe/Brussels:20260430T180000
 DTEND;TZID=Europe/Brussels:20260430T193000
-SUMMARY:Heuvelloop/Wandeling 100–200hm (optioneel)
-DESCRIPTION:# Sessie: Heuvelloop/Wandeling 100–200hm (optioneel)\n\n**Dat
- um:** do 30 april 2026\, 18:00–19:30  \n**Blok:** 1 — Aerobe Basis  \n
- **Week:** 3  \n**Type:** Heuvel  \n**Hoogtemeters:** 100–200 hm  \n**Duu
- r:** ~1u30  \n**Status:** Optioneel\n**Voltooid:** nee\n\n## Doel\n\nEerst
- e bewuste heuvelsessie. Hoogtemeters maken en bergspecifieke bewegingspatr
- onen inslijpen.\n\n## Intentie\n\nHoogtemeters maken is directe bergvoorbe
- reiding. Zoek een route van 8–10 km met 100–200 hm. Combinatie van lop
- en en wandelen is prima — het gaat om de vertikale meter\, niet om snelh
- eid. De technieken voor bergop en bergaf zijn even belangrijk als de belas
- ting zelf.\n\n## Uitvoering\n\n**Bergop-focus**\n\n- Verkort je pas naarma
- te het steiler wordt\n- Leun licht voorover vanuit de enkels (niet het mid
- del)\n- Duw af met de hele voet\n- Handen op knieën bij steil terrein (be
- rgwandelaarstechniek)\n- Adem uit op ritme: elke 3 stappen krachtig uitade
- men\n- RPE 5–6 — je ademt dieper maar het is geen gevecht\n- Hartslag 
- tot Zone 3 (152–164 bpm)\n\n**Bergaf-focus**\n\n- Knieën licht gebogen\
- n- Kleine\, snelle passen\n- Niet remmen met hakken — hele voet gebruike
- n\n- Rustig joggen\, Zone 2 bergaf\n\n## Richtwaarden\n\n| Parameter    | 
- Richtlijn                     |\n| ------------ | ------------------------
- ----- |\n| Hoogtemeters | 100–200 hm                    |\n| HR bergop  
-   | Tot Zone 3 (152–164)          |\n| HR bergaf    | Zone 2 (<152)     
-             |\n| RPE bergop   | 5–6                           |\n| Loopt
- echniek | Korte passen\, vooroverleunend |\n\n## Coach-noot\n\nDit is week
-  3 van het schema. De helling hoeft niet groot te zijn — zelfs 100 hm op
-  een heuvelachtige route van 8 km is waardevol. Elke heuvelsessie bouwt de
-  specifieke bergbeenspieren die je in de Dolomieten nodig hebt. Sla gerust
-  over als je moe bent van de intervallen gisteren.\n
+SUMMARY:Heuvelloop 10 km
+DESCRIPTION:# Sessie: Heuvelloop 10 km\n\n**Datum:** do 30 april 2026\, 18:
+ 00–19:30  \n**Blok:** 1 — Aerobe Basis  \n**Week:** 3  \n**Type:** Heu
+ vel  \n**Afstand:** 10 km  \n**Hoogtemeters:** 100–200 hm  \n**Duur:** ~
+ 1u15–1u30  \n**Status:** Gepland\n**Voltooid:** nee\n\n## Doel\n\nEerste
+  bewuste heuvelsessie. Hoogtemeters maken en bergspecifieke bewegingspatro
+ nen inslijpen.\n\n## Intentie\n\nHoogtemeters maken is directe bergvoorber
+ eiding. Plan een route van 10 km met 100–200 hm. Combinatie van lopen en
+  wandelen is prima — het gaat om de vertikale meter\, niet om snelheid. 
+ De technieken voor bergop en bergaf zijn even belangrijk als de belasting 
+ zelf.\n\n## Uitvoering\n\n**Bergop-focus**\n\n- Verkort je pas naarmate he
+ t steiler wordt\n- Leun licht voorover vanuit de enkels (niet het middel)\
+ n- Duw af met de hele voet\n- Handen op knieën bij steil terrein (bergwan
+ delaarstechniek)\n- Adem uit op ritme: elke 3 stappen krachtig uitademen\n
+ - RPE 5–6 — je ademt dieper maar het is geen gevecht\n- Hartslag tot Z
+ one 3 (152–164 bpm)\n\n**Bergaf-focus**\n\n- Knieën licht gebogen\n- Kl
+ eine\, snelle passen\n- Niet remmen met hakken — hele voet gebruiken\n- 
+ Rustig joggen\, Zone 2 bergaf\n\n## Richtwaarden\n\n| Parameter    | Richt
+ lijn                     |\n| ------------ | -----------------------------
+  |\n| Afstand      | 10 km                         |\n| Hoogtemeters | 100
+ –200 hm                    |\n| HR bergop    | Tot Zone 3 (152–164)   
+        |\n| HR bergaf    | Zone 2 (<152)                 |\n| RPE bergop  
+  | 5–6                           |\n| Looptechniek | Korte passen\, voor
+ overleunend |\n\n## Coach-noot\n\nDit is week 3 van het schema\, dag na de
+  intervallen. 10 km met hoogtemeters is een goede dosis — niet te zwaar\
+ , maar genoeg om bergspecifieke beenspieren te activeren. De helling hoeft
+  niet groot te zijn\; 100–200 hm over 10 km is realistisch op een heuvel
+ achtige route. Luister naar je benen — als ze zwaar aanvoelen van gister
+ en\, houd dan de heuvels rustig en focus op techniek.\n
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-02-lange-duurloop@stravacoach
-DTSTAMP:20260429T140820Z
+DTSTAMP:20260429T141455Z
 DTSTART;TZID=Europe/Brussels:20260502T090000
 DTEND;TZID=Europe/Brussels:20260502T110000
 SUMMARY:14km – Lange Duurloop
@@ -259,7 +261,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-03-kracht@stravacoach
-DTSTAMP:20260429T140820Z
+DTSTAMP:20260429T141455Z
 DTSTART;TZID=Europe/Brussels:20260503T100000
 DTEND;TZID=Europe/Brussels:20260503T104500
 SUMMARY:Kracht & Stabiliteit – Bergfocus
@@ -296,7 +298,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-06-duurloop@stravacoach
-DTSTAMP:20260429T140820Z
+DTSTAMP:20260429T141455Z
 DTSTART;TZID=Europe/Brussels:20260506T180000
 DTEND;TZID=Europe/Brussels:20260506T190000
 SUMMARY:6km – Rustige Duurloop + Strides (Teruglaadweek)
@@ -326,7 +328,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-09-lange-duurloop@stravacoach
-DTSTAMP:20260429T140820Z
+DTSTAMP:20260429T141455Z
 DTSTART;TZID=Europe/Brussels:20260509T090000
 DTEND;TZID=Europe/Brussels:20260509T103000
 SUMMARY:12km – Rustige Duurloop (Teruglaadweek)
@@ -355,7 +357,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-10-kracht@stravacoach
-DTSTAMP:20260429T140820Z
+DTSTAMP:20260429T141455Z
 DTSTART;TZID=Europe/Brussels:20260510T100000
 DTEND;TZID=Europe/Brussels:20260510T104000
 SUMMARY:Kracht & Stabiliteit – Licht Onderhoud (Teruglaadweek)
@@ -382,7 +384,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-07-20-goal@stravacoach
-DTSTAMP:20260429T140820Z
+DTSTAMP:20260429T141455Z
 DTSTART;VALUE=DATE:20260720
 DTEND;VALUE=DATE:20260721
 SUMMARY:🎯 Mountain hiking in the Dolomites
