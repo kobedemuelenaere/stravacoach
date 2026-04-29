@@ -19,13 +19,19 @@ If the athlete specified an activity ID, name, or date — use that. Otherwise f
 
 Get max HR from `goals/goal_current.md` if available, otherwise use 190.
 
+Important: do not use heredoc (`<< STREAMEOF`) and do not pass inline stream JSON to the script in normal workflow.
+Always call the script with `--activity-id`.
+
 ```bash
 python3 /Users/kobedemuelenaere/Programming/claudeprojects/stravacoach/scripts/analyze_streams.py --activity-id <activity_id> --max-hr <max_hr>
 ```
 
 Read the JSON output. This gives you:
 
-- `session_type` — detected type (hill_repeats / intervals / fartlek / tempo / long_run / easy_run / moderate_run / recovery_run)
+- `session_type` — detected type (hill_repeats / intervals / fartlek / tempo / long_run / easy_run / moderate_run / recovery_run / trail_mountain)
+- `athlete_hint` — session type override from Strava description or private note (null if no hint found)
+- `athlete_description` — the raw Strava activity description (the athlete may note intent, session goal, or how they felt)
+- `athlete_private_note` — the athlete's private Strava note (not visible to followers — may contain RPE, how they felt, session intent)
 - `overall` — key stats including `avg_hr_adjusted`, `avg_hr_note`, pace, elevation
 - `hr_zones` — time in each zone post-warmup
 - `hr_drift_bpm` — cardiac drift
@@ -57,9 +63,11 @@ Match the closest hour to the activity start time. If unavailable, note it and c
 
 Read `plan/sessions/` for the active block. Match by session type and intent — not by date. State your reasoning clearly. If no match, say so and name what type of session this effectively was.
 
+If the script returned an `athlete_hint` (from the Strava description), trust it as the primary session type. The athlete knows what they set out to do.
+
 ## Step 6 — Ask for athlete notes
 
-If the Strava activity has a description, read it. Ask in chat: "Any RPE score or notes to add for this session?" If no response, proceed.
+The script output includes `athlete_description` (public) and `athlete_private_note` (private) from Strava. If either contains useful context (intent, RPE, how they felt, terrain notes), use it directly — the private note is especially valuable since that's where the athlete logs things for themselves. Ask in chat: "Any RPE score or notes to add for this session?" If no response, proceed.
 
 ## Step 7 — Write the three report files
 
@@ -77,6 +85,7 @@ Create folder: `sessions/YYYY-MM-DD_<slug>/`
 **Avg pace:** X:XX /km | **Avg HR (adj):** X bpm
 **HR adjustment note:** [from `overall.avg_hr_note`] | **Warmup excluded:** [from `warmup_end_seconds`]s
 **Max HR:** X bpm | **Elevation gain:** X m
+**Elevation gain:** X m | **Gain/km:** X m/km | **Terrain:** [flat / rolling / hilly / trail — based on gain/km: <5 flat, 5-15 rolling, 15-25 hilly, >25 trail/mountain]
 **Weather:** [temp °C, wind X km/h, humidity X%, rain/no-rain — or "unavailable"]
 **Matched plan session:** [session name + date, or "unscheduled"]
 
@@ -162,6 +171,13 @@ Create folder: `sessions/YYYY-MM-DD_<slug>/`
 
 **First half:** X:XX /km | **Second half:** X:XX /km | **Split type:** [from script]
 
+## Terrain Impact
+
+[Only include this section if gain/km > 5. Briefly note how terrain affected the session:]
+
+- **Elevation profile:** [undulating / one big climb / repeated hills / sand/trail surface if known from description]
+- **Effort adjustment:** [e.g. "At 15 m/km gain, expect pace ~30-45s/km slower than flat equivalent. HR is a better effort indicator than pace on this terrain."]
+
 ## Conditions & Context
 
 **Weather:** [full weather line]
@@ -172,65 +188,62 @@ Create folder: `sessions/YYYY-MM-DD_<slug>/`
 
 ### feedback.md
 
-Coaching voice — honest, constructive, specific. Based on the analysis output.
+Coaching voice — honest, constructive, specific. **Keep the entire file under 200 words.** No lecturing. Reference numbers, not opinions.
+
+**Terrain rule:** When gain/km > 8 or the description mentions dunes/trail/sand, judge effort by HR not pace. A 7:00/km through dunes at Z3 HR is genuinely hard work — don't compare it to flat paces. Musculoskeletal load from hills, sand, and technical terrain is real even when pace looks slow.
 
 ```markdown
 # Feedback — [Activity Name] ([Date])
 
 **Matched session:** [planned session or "unscheduled"]
 **Session type:** [detected type]
+**Verdict:** [Yes / Mostly / Partially / No — one sentence]
 
----
+## Key takeaway
 
-## Against the plan
+[1–2 sentences: the single most important thing about this session]
 
-[Was the intent met? What was on target, what wasn't? Compare actual to prescription.]
+## What worked
 
-## Effort assessment
+[1–2 bullet points with specific numbers]
 
-[Was effort appropriate for this session type? Based on HR zones, progression, type-specific data.]
+## What to adjust
 
-## What you did well
-
-[Specific positives — reference actual numbers from the analysis]
-
-## What to work on
-
-[Specific, actionable — one or two things, not a list of everything]
-
-## Verdict
-
-[Yes / Mostly / Partially / No — did you nail the session intent? One sentence.]
+[1 bullet point — one concrete, actionable thing. Skip if nothing meaningful.]
 ```
 
 ---
 
 ### warnings.md
 
-Only write genuine flags. If nothing warrants a warning, write: `No warnings for this session.`
+**Default is NO warnings.** Only flag something if it requires the athlete to change behaviour in the next session. Most sessions should have zero warnings.
 
-Genuine warning triggers:
+Max **1 warning per session**. Max **50 words** per warning. No multi-paragraph explanations, no speculative risks, no "watch for" lists.
 
-- Easy run with sustained Z3+ HR
-- HR above 95% max for extended period (>3 min)
-- Effort pace fading significantly across intervals/reps (>8% drop)
-- Consecutive hard sessions with no recovery day between
-- HR not recovering between hill reps (still above Z4 at start of next climb)
-- Signs of overreaching (HR drift >15 bpm, big positive split on easy run)
+Genuine triggers (must meet threshold, not just be present):
+
+- Easy run with >60% time in Z3+ (not just "some Z3")
+- HR above 95% max for >3 min continuously
+- Effort pace fading >10% across reps with rising HR
+- 3+ hard sessions in a row with zero easy days between
 
 ```markdown
 # Warnings — [Activity Name] ([Date])
 
-## [Warning title]
+No warnings for this session.
+```
 
-[What the data shows, why it's a flag, what to watch for]
+Or if genuinely warranted:
+
+```markdown
+# Warnings — [Activity Name] ([Date])
+
+## [Short title]
+
+[Data point → what to do differently. Max 50 words.]
 ```
 
 ---
-
-## Step 9 — Ask about athlete feedback
-
-"How did you feel? Any aches, observations, or notes to log?" Save to `sessions/YYYY-MM-DD_<slug>/athlete_feedback.md` if they respond.
 
 ## Step 8 — Ask about athlete feedback
 

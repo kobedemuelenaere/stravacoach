@@ -248,6 +248,8 @@ def fetch_activity_input(activity_id: int, env_file: Path) -> Dict:
         "metadata": {
             "activity_id": details.get("id"),
             "activity_name": details.get("name"),
+            "description": details.get("description") or "",
+            "private_note": details.get("private_note") or "",
             "date": details.get("start_date_local", "")[:10],
             "elapsed_time_s": details.get("elapsed_time"),
             "distance_m": details.get("distance"),
@@ -475,12 +477,47 @@ def find_effort_blocks(velocity, time, threshold_factor=1.15, min_duration_s=30,
     return merged
 
 
-def detect_session_type(streams, warmup_end_idx, max_hr, total_time_s, total_dist_m):
+# ── Athlete hint parsing ─────────────────────────────────────────────────────
+
+_HINT_MAP = {
+    "lsd": "long_run",
+    "long run": "long_run",
+    "long": "long_run",
+    "easy": "easy_run",
+    "recovery": "recovery_run",
+    "interval": "intervals",
+    "intervals": "intervals",
+    "tempo": "tempo",
+    "threshold": "tempo",
+    "fartlek": "fartlek",
+    "hill": "hill_repeats",
+    "hills": "hill_repeats",
+    "hillrun": "hill_repeats",
+    "hill repeats": "hill_repeats",
+    "trail": "trail_mountain",
+}
+
+def parse_athlete_hint(description: str) -> Optional[str]:
+    """Extract a session type hint from the Strava activity description."""
+    if not description:
+        return None
+    desc_lower = description.lower().strip()
+    for keyword, session_type in _HINT_MAP.items():
+        if keyword in desc_lower:
+            return session_type
+    return None
+
+
+def detect_session_type(streams, warmup_end_idx, max_hr, total_time_s, total_dist_m, athlete_hint=None):
     velocity = streams.get("velocity_smooth", [])
     altitude = streams.get("altitude", [])
     heartrate = streams.get("heartrate", [])
     time = streams.get("time", [])
     distance = streams.get("distance", [])
+
+    # ── Athlete hint override ────────────────────────────────────────────────
+    if athlete_hint:
+        return athlete_hint, []
 
     # ── Hill repeat check ────────────────────────────────────────────────────
     total_gain = 0
@@ -502,6 +539,28 @@ def detect_session_type(streams, warmup_end_idx, max_hr, total_time_s, total_dis
     # ── Pace variance check ──────────────────────────────────────────────────
     working_vel = velocity[warmup_end_idx:]
     valid_paces = [vel_to_pace(v) for v in working_vel if v > 0.3]
+
+    # ── Long run / trail guard ───────────────────────────────────────────────
+    # Runs over 55 minutes with significant elevation or walking segments are
+    # trail/long runs where pace variance comes from terrain, not structured work.
+    walking_points = sum(1 for v in velocity if 0 < v < 1.5)
+    moving_points = sum(1 for v in velocity if v > 0.3)
+    walking_pct = (walking_points / moving_points * 100) if moving_points else 0
+    is_long_duration = total_time_s > 3300  # > 55 min
+    is_hilly = gain_per_km > 8
+    has_walking = walking_pct > 5
+
+    if is_long_duration and (is_hilly or has_walking):
+        working_hr = heartrate[warmup_end_idx:] if heartrate else []
+        avg_hr = statistics.mean(working_hr) if working_hr else None
+        if gain_per_km > 20:
+            return "trail_mountain", []
+        # On hilly/trail terrain, HR runs higher from elevation — use a higher
+        # threshold before calling it tempo (flat runs use 0.82).
+        tempo_hr_threshold = 0.87 if is_hilly else 0.82
+        if avg_hr and avg_hr / max_hr > tempo_hr_threshold:
+            return "tempo", []
+        return "long_run", []
 
     if valid_paces and len(valid_paces) > 10:
         mean_pace = statistics.mean(valid_paces)
@@ -684,8 +743,13 @@ def analyze(data, max_hr=DEFAULT_MAX_HR):
     warmup_end_idx, warmup_excluded = detect_warmup_end_idx(time, heartrate, max_hr)
 
     # ── Session type detection ──────────────────────────────────────────────
+    athlete_hint = (
+        parse_athlete_hint(meta.get("description", ""))
+        or parse_athlete_hint(meta.get("private_note", ""))
+    )
     session_type, structure_data = detect_session_type(
-        streams, warmup_end_idx, max_hr, total_time_s, total_dist_m
+        streams, warmup_end_idx, max_hr, total_time_s, total_dist_m,
+        athlete_hint=athlete_hint,
     )
 
     # ── Overall stats ───────────────────────────────────────────────────────
@@ -742,6 +806,9 @@ def analyze(data, max_hr=DEFAULT_MAX_HR):
 
     result = {
         "session_type": session_type,
+        "athlete_hint": athlete_hint,
+        "athlete_description": meta.get("description", ""),
+        "athlete_private_note": meta.get("private_note", ""),
         "overall": {
             "distance_km": round(total_dist_m / 1000, 2),
             "duration_s": round(total_time_s),
@@ -754,6 +821,7 @@ def analyze(data, max_hr=DEFAULT_MAX_HR):
             ),
             "max_hr": round(max_hr_overall) if max_hr_overall else None,
             "elevation_gain_m": round(total_elevation_gain, 1),
+            "gain_per_km": round(total_elevation_gain / total_dist_m * 1000, 1) if total_dist_m > 0 else 0,
             "hr_efficiency_index": hr_efficiency,
         },
         "hr_zones": zone_summary,
