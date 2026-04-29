@@ -6,8 +6,9 @@
 **Type:** Lange duurloop  
 **Afstand:** 14 km  
 **Duur:** ~2u  
-**Status:** Gepland
+**Status:** Uitgesteld → verplaatst naar 5 mei
 **Voltooid:** nee
+**Reden:** Voetpijn (onderkant/holvoet) op 29 april. 2 mei wordt een korte testloop van 3 km — zie session_2026-05-02_testloopje-3km.md.
 
 ## Doel
 
