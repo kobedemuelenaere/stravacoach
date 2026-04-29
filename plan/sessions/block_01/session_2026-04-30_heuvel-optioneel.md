@@ -1,12 +1,13 @@
-# Sessie: Heuvelloop/Wandeling 100–200hm (optioneel)
+# Sessie: Heuvelloop 10 km
 
 **Datum:** do 30 april 2026, 18:00–19:30  
 **Blok:** 1 — Aerobe Basis  
 **Week:** 3  
 **Type:** Heuvel  
+**Afstand:** 10 km  
 **Hoogtemeters:** 100–200 hm  
-**Duur:** ~1u30  
-**Status:** Optioneel
+**Duur:** ~1u15–1u30  
+**Status:** Gepland
 **Voltooid:** nee
 
 ## Doel
@@ -15,7 +16,7 @@ Eerste bewuste heuvelsessie. Hoogtemeters maken en bergspecifieke bewegingspatro
 
 ## Intentie
 
-Hoogtemeters maken is directe bergvoorbereiding. Zoek een route van 8–10 km met 100–200 hm. Combinatie van lopen en wandelen is prima — het gaat om de vertikale meter, niet om snelheid. De technieken voor bergop en bergaf zijn even belangrijk als de belasting zelf.
+Hoogtemeters maken is directe bergvoorbereiding. Plan een route van 10 km met 100–200 hm. Combinatie van lopen en wandelen is prima — het gaat om de vertikale meter, niet om snelheid. De technieken voor bergop en bergaf zijn even belangrijk als de belasting zelf.
 
 ## Uitvoering
 
@@ -40,6 +41,7 @@ Hoogtemeters maken is directe bergvoorbereiding. Zoek een route van 8–10 km me
 
 | Parameter    | Richtlijn                     |
 | ------------ | ----------------------------- |
+| Afstand      | 10 km                         |
 | Hoogtemeters | 100–200 hm                    |
 | HR bergop    | Tot Zone 3 (152–164)          |
 | HR bergaf    | Zone 2 (<152)                 |
@@ -48,4 +50,4 @@ Hoogtemeters maken is directe bergvoorbereiding. Zoek een route van 8–10 km me
 
 ## Coach-noot
 
-Dit is week 3 van het schema. De helling hoeft niet groot te zijn — zelfs 100 hm op een heuvelachtige route van 8 km is waardevol. Elke heuvelsessie bouwt de specifieke bergbeenspieren die je in de Dolomieten nodig hebt. Sla gerust over als je moe bent van de intervallen gisteren.
+Dit is week 3 van het schema, dag na de intervallen. 10 km met hoogtemeters is een goede dosis — niet te zwaar, maar genoeg om bergspecifieke beenspieren te activeren. De helling hoeft niet groot te zijn; 100–200 hm over 10 km is realistisch op een heuvelachtige route. Luister naar je benen — als ze zwaar aanvoelen van gisteren, houd dan de heuvels rustig en focus op techniek.
