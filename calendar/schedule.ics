@@ -24,7 +24,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:stravacoach-2026-04-16-duurloop@stravacoach
-DTSTAMP:20260504T131548Z
+DTSTAMP:20260504T132628Z
 DTSTART;TZID=Europe/Brussels:20260416T180000
 DTEND;TZID=Europe/Brussels:20260416T191500
 SUMMARY:✓ 6km – Rustige Duurloop + Strides
@@ -55,7 +55,7 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-04-19-lange-duurloop@stravacoach
-DTSTAMP:20260504T131548Z
+DTSTAMP:20260504T132628Z
 DTSTART;TZID=Europe/Brussels:20260419T090000
 DTEND;TZID=Europe/Brussels:20260419T104500
 SUMMARY:✓ 11km – Lange Duurloop
@@ -86,7 +86,7 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-04-22-fartlek@stravacoach
-DTSTAMP:20260504T131548Z
+DTSTAMP:20260504T132628Z
 DTSTART;TZID=Europe/Brussels:20260422T180000
 DTEND;TZID=Europe/Brussels:20260422T191500
 SUMMARY:✓ 7km – Fartlek
@@ -122,7 +122,7 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-04-25-lange-duurloop@stravacoach
-DTSTAMP:20260504T131548Z
+DTSTAMP:20260504T132628Z
 DTSTART;TZID=Europe/Brussels:20260425T090000
 DTEND;TZID=Europe/Brussels:20260425T104500
 SUMMARY:✓ 12km – Lange Duurloop
@@ -151,7 +151,7 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-04-29-interval@stravacoach
-DTSTAMP:20260504T131548Z
+DTSTAMP:20260504T132628Z
 DTSTART;TZID=Europe/Brussels:20260429T180000
 DTEND;TZID=Europe/Brussels:20260429T192000
 SUMMARY:✓ 7km – Intervaltraining 5×3min
@@ -188,84 +188,8 @@ DESCRIPTION:✓ VOLTOOID\n\n# Sessie: 7km – Intervaltraining 5×3min\n\n*
 STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
-UID:stravacoach-2026-04-30-heuvel@stravacoach
-DTSTAMP:20260504T131548Z
-DTSTART;TZID=Europe/Brussels:20260430T180000
-DTEND;TZID=Europe/Brussels:20260430T193000
-SUMMARY:Heuvelloop 10 km
-DESCRIPTION:# Sessie: Heuvelloop 10 km\n\n**Datum:** do 30 april 2026\, 18:
- 00–19:30  \n**Blok:** 1 — Aerobe Basis  \n**Week:** 3  \n**Type:** Heu
- vel  \n**Afstand:** 10 km  \n**Hoogtemeters:** 100–200 hm  \n**Duur:** ~
- 1u15–1u30  \n**Status:** Afgelast\n**Voltooid:** nee\n**Reden:** Rechter
- voetontsteeking (onderkant voet/holvoet) tijdens avondloop 29 april. Rustd
- ag verplicht.\n\n## Doel\n\nEerste bewuste heuvelsessie. Hoogtemeters make
- n en bergspecifieke bewegingspatronen inslijpen.\n\n## Intentie\n\nHoogtem
- eters maken is directe bergvoorbereiding. Plan een route van 10 km met 100
- –200 hm. Combinatie van lopen en wandelen is prima — het gaat om de ve
- rtikale meter\, niet om snelheid. De technieken voor bergop en bergaf zijn
-  even belangrijk als de belasting zelf.\n\n## Uitvoering\n\n**Bergop-focus
- **\n\n- Verkort je pas naarmate het steiler wordt\n- Leun licht voorover v
- anuit de enkels (niet het middel)\n- Duw af met de hele voet\n- Handen op 
- knieën bij steil terrein (bergwandelaarstechniek)\n- Adem uit op ritme: e
- lke 3 stappen krachtig uitademen\n- RPE 5–6 — je ademt dieper maar het
-  is geen gevecht\n- Hartslag tot Zone 3 (152–164 bpm)\n\n**Bergaf-focus*
- *\n\n- Knieën licht gebogen\n- Kleine\, snelle passen\n- Niet remmen met 
- hakken — hele voet gebruiken\n- Rustig joggen\, Zone 2 bergaf\n\n## Rich
- twaarden\n\n| Parameter    | Richtlijn                     |\n| ----------
- -- | ----------------------------- |\n| Afstand      | 10 km              
-            |\n| Hoogtemeters | 100–200 hm                    |\n| HR ber
- gop    | Tot Zone 3 (152–164)          |\n| HR bergaf    | Zone 2 (<152)
-                  |\n| RPE bergop   | 5–6                           |\n| 
- Looptechniek | Korte passen\, vooroverleunend |\n\n## Coach-noot\n\nDit is
-  week 3 van het schema\, dag na de intervallen. 10 km met hoogtemeters is 
- een goede dosis — niet te zwaar\, maar genoeg om bergspecifieke beenspie
- ren te activeren. De helling hoeft niet groot te zijn\; 100–200 hm over 
- 10 km is realistisch op een heuvelachtige route. Luister naar je benen —
-  als ze zwaar aanvoelen van gisteren\, houd dan de heuvels rustig en focus
-  op techniek.\n
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:stravacoach-2026-05-02-lange-duurloop@stravacoach
-DTSTAMP:20260504T131548Z
-DTSTART;TZID=Europe/Brussels:20260502T090000
-DTEND;TZID=Europe/Brussels:20260502T110000
-SUMMARY:14km – Lange Duurloop
-DESCRIPTION:# Sessie: 14km – Lange Duurloop\n\n**Datum:** za 2 mei 2026\,
-  09:00–11:00  \n**Blok:** 1 — Aerobe Basis  \n**Week:** 3  \n**Type:**
-  Lange duurloop  \n**Afstand:** 14 km  \n**Duur:** ~2u  \n**Status:** Uitg
- esteld → verplaatst naar 5 mei\n**Voltooid:** nee\n**Reden:** Voetpijn (
- onderkant/holvoet) op 29 april. 2 mei wordt een korte testloop van 3 km 
- — zie session_2026-05-02_testloopje-3km.md.\n\n## Doel\n\nNieuw training
- s-PR: 14 km. Puur aerobe opbouw — rustig en geduldig. Dit is de langste 
- loop tot nu toe.\n\n## Intentie\n\n14 km op Zone 2 is een serieuze aeroob 
- prikkel. Het gaat om tijd op de benen opbouwen\, niet om snelheid. Voeding
-  en drinken beginnen een rol te spelen bij looptijden boven 75 min — dit
-  is het moment om dat te beginnen oefenen voor de bergen.\n\n## Uitvoering
- \n\n**Opwarming (8 min)**\n\n- 3 min wandelen\n- 5 min heel rustig inlopen
- \n\n**Kern (80–90 min)**\n\n- 14 km constant tempo\n- Tempo: 6:55–7:15
- /km\n- Hartslag: Zone 2 (135–152 bpm)\n- RPE: 4 — conversatietempo de 
- hele loop\n- Km 1–5: bewust rustig inhouden\n- Km 5–10: ritme vasthoud
- en\n- Km 10–14: als het goed gaat\, mag je licht versnellen (niet onder 
- 6:40/km)\n\n**Voeding en drinken**\n\n- 300–500 ml water mee\n- Overweeg
-  een klein tussendoortje rond km 9 (banaan\, dadels) als je langer dan 75 
- min loopt\n- Experimenteer — in de bergen moet je constant eten\n\n**Coo
- ling down (10 min)**\n\n- 5 min rustig uitlopen\n- 5 min wandelen + stretc
- hen (kuiten\, hamstrings\, heupen)\n\n## Richtwaarden\n\n| Parameter | Ric
- htlijn                   |\n| --------- | --------------------------- |\n|
-  Tempo     | 6:55–7:15/km                |\n| Hartslag  | 135–152 bpm 
- (Zone 2)        |\n| RPE       | 4\, mag in km 11–14 naar 5   |\n| Grens
-      | Als HR boven 155: vertragen |\n\n## Succescriterium\n\nLoop afgeron
- d op Zone 2 zonder de hartslag te moeten "bewaken". Als de HR de hele loop
-  onder 152 blijft zonder moeite\, is de aerobe basis groeiend.\n\n## Coach
- -noot\n\n14 km = ~85 min op de benen. Dit is een grote stap richting halve
-  marathon én richting lange bergdagen. Voeding meenemen en testen is net 
- zo belangrijk als de kilometers zelf.\n
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
 UID:stravacoach-2026-05-02-herstel-test@stravacoach
-DTSTAMP:20260504T131548Z
+DTSTAMP:20260504T132628Z
 DTSTART;TZID=Europe/Brussels:20260502T090000
 DTEND;TZID=Europe/Brussels:20260502T093000
 SUMMARY:✓ Testloopje 3 km – Voet check
@@ -299,48 +223,8 @@ DESCRIPTION:✓ VOLTOOID\n\n# Sessie: Testloopje 3 km – Voet check\n\n**D
 STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
-UID:stravacoach-2026-05-03-kracht@stravacoach
-DTSTAMP:20260504T131548Z
-DTSTART;TZID=Europe/Brussels:20260503T100000
-DTEND;TZID=Europe/Brussels:20260503T104500
-SUMMARY:Kracht & Stabiliteit – Bergfocus
-DESCRIPTION:# Sessie: Kracht & Stabiliteit – Bergfocus\n\n**Datum:** zo 3
-  mei 2026\, 10:00–10:45  \n**Blok:** 1 — Aerobe Basis  \n**Week:** 3  
- \n**Type:** Kracht  \n**Duur:** ~45 min  \n**Status:** Gepland (aangepast)
- \n**Voltooid:** nee\n**Aanpassing:** Voetpijn rechts (onderkant/holvoet) 
- — sla step-ups en kuitverheffingen over. Focus op plank\, dead bugs\, Bu
- lgaarse split squat (als pijnvrij)\, zijwaartse lunges. Geen plantar belas
- ting.\n\n## Doel\n\nFunctionele krachttraining gericht op bergsterkte. Lic
- haamsgewicht of minimaal materiaal. 30–40 min is genoeg.\n\n## Intentie\
- n\nKrachtsessies in Blok 1 leggen een basisniveau in de spiergroepen die b
- ij bergactiviteiten het meest belast worden: kuiten (bergaf afdaling)\, qu
- adriceps (excentrisch bij dalen)\, glutes (klimkracht)\, en core (stabilit
- eit op ongelijk terrein). 3 rondes\, focus op kwaliteit van beweging — n
- iet op gewicht.\n\n## Circuit — 3 rondes (60 sec rust tussen rondes)\n\n
- | #   | Oefening                  | Reps         | Focus                  
-                            |\n| --- | ------------------------- | --------
- ---- | ------------------------------------------------- |\n| 1   | Step-u
- ps op bank/trap     | 12 per been  | Bergopwaarts simulatie. Duw af vanuit
-  hele voet   |\n| 2   | Bulgaarse split squat     | 10 per been  | Eenbeni
- ge kracht en balans. Romp recht houden     |\n| 3   | Kuitverheffingen (st
- aand) | 15× langzaam | 2 sec omhoog\, 3 sec omlaag — achilestendonprikk
- el |\n| 4   | Plank                     | 45 sec       | Rompstabiliteit v
- oor ongelijk terrein             |\n| 5   | Dead bugs                 | 10
-  per kant  | Core-activatie en coördinatie                     |\n| 6   |
-  Zijwaartse lunges         | 10 per been  | Laterale stabiliteit voor tech
- nische paden        |\n\n**Warming-up (5 min)**\n\n- Heupdraaien\, beenzwa
- aien\, lichte squats\n\n**Cooling down (5 min)**\n\n- 90/90 heupsstretch\,
-  duivenhouding\n- Kuitstretch\n- Quadricepsstretch\n\n## Coach-noot\n\nFre
- quentie: 1–2× per week. Niet op dezelfde dag als een zware loopsessie. 
- Zondag na de zaterdag-lange loop is ideaal — de benen zijn al belast maa
- r niet vers\, dus de prikkel is gericht. De oefeningen zien er simpel uit 
- maar de bergspecifieke toepassing (step-ups\, split squat op helling) maak
- t het verschil.\n
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
 UID:stravacoach-2026-05-05-fietsen-cross-training@stravacoach
-DTSTAMP:20260504T131548Z
+DTSTAMP:20260504T132628Z
 DTSTART;TZID=Europe/Brussels:20260505T180000
 DTEND;TZID=Europe/Brussels:20260505T193000
 SUMMARY:Fietsen – Aerobe Onderhoud (vervangt 14km lange duurloop)
@@ -370,7 +254,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-06-fietsen-cross-training@stravacoach
-DTSTAMP:20260504T131548Z
+DTSTAMP:20260504T132628Z
 DTSTART;TZID=Europe/Brussels:20260506T180000
 DTEND;TZID=Europe/Brussels:20260506T190000
 SUMMARY:Fietsen – Actief Herstel (vervangt 6km duurloop + strides)
@@ -392,7 +276,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-09-test-fietsen-cross-training@stravacoach
-DTSTAMP:20260504T131548Z
+DTSTAMP:20260504T132628Z
 DTSTART;TZID=Europe/Brussels:20260509T090000
 DTEND;TZID=Europe/Brussels:20260509T103000
 SUMMARY:Testloop 3km + Fietsen (vervangt 12km lange duurloop)
@@ -423,7 +307,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-10-kracht@stravacoach
-DTSTAMP:20260504T131548Z
+DTSTAMP:20260504T132628Z
 DTSTART;TZID=Europe/Brussels:20260510T100000
 DTEND;TZID=Europe/Brussels:20260510T104000
 SUMMARY:Kracht & Stabiliteit – Licht Onderhoud (Teruglaadweek)
@@ -450,7 +334,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-07-20-goal@stravacoach
-DTSTAMP:20260504T131548Z
+DTSTAMP:20260504T132628Z
 DTSTART;VALUE=DATE:20260720
 DTEND;VALUE=DATE:20260721
 SUMMARY:🎯 Mountain hiking in the Dolomites

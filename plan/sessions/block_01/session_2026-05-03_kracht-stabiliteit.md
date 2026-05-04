@@ -5,7 +5,7 @@
 **Week:** 3  
 **Type:** Kracht  
 **Duur:** ~45 min  
-**Status:** Gepland (aangepast)
+**Status:** Niet gedaan — persoonlijke omstandigheden (overlijden opa)
 **Voltooid:** nee
 **Aanpassing:** Voetpijn rechts (onderkant/holvoet) — sla step-ups en kuitverheffingen over. Focus op plank, dead bugs, Bulgaarse split squat (als pijnvrij), zijwaartse lunges. Geen plantar belasting.
 

@@ -403,6 +403,9 @@ def collect_sessions(plan_dir):
         for session_file in sorted(block_dir.glob("session_*.md")):
             session = parse_session_file(session_file)
             if session:
+                skip_prefixes = ("geschrapt", "niet gedaan", "afgelast")
+                if session["status"].lower().startswith(skip_prefixes):
+                    continue
                 sessions.append(session)
 
     return sessions

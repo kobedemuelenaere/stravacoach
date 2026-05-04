@@ -7,7 +7,7 @@
 **Afstand:** 10 km  
 **Hoogtemeters:** 100–200 hm  
 **Duur:** ~1u15–1u30  
-**Status:** Afgelast
+**Status:** Niet gedaan — omgewisseld met lange duurloop (29 apr), daarna voetpijn
 **Voltooid:** nee
 **Reden:** Rechtervoetontsteeking (onderkant voet/holvoet) tijdens avondloop 29 april. Rustdag verplicht.
 
