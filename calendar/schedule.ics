@@ -24,7 +24,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:stravacoach-2026-04-16-duurloop@stravacoach
-DTSTAMP:20260429T192201Z
+DTSTAMP:20260504T131548Z
 DTSTART;TZID=Europe/Brussels:20260416T180000
 DTEND;TZID=Europe/Brussels:20260416T191500
 SUMMARY:✓ 6km – Rustige Duurloop + Strides
@@ -55,7 +55,7 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-04-19-lange-duurloop@stravacoach
-DTSTAMP:20260429T192201Z
+DTSTAMP:20260504T131548Z
 DTSTART;TZID=Europe/Brussels:20260419T090000
 DTEND;TZID=Europe/Brussels:20260419T104500
 SUMMARY:✓ 11km – Lange Duurloop
@@ -86,7 +86,7 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-04-22-fartlek@stravacoach
-DTSTAMP:20260429T192201Z
+DTSTAMP:20260504T131548Z
 DTSTART;TZID=Europe/Brussels:20260422T180000
 DTEND;TZID=Europe/Brussels:20260422T191500
 SUMMARY:✓ 7km – Fartlek
@@ -122,7 +122,7 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-04-25-lange-duurloop@stravacoach
-DTSTAMP:20260429T192201Z
+DTSTAMP:20260504T131548Z
 DTSTART;TZID=Europe/Brussels:20260425T090000
 DTEND;TZID=Europe/Brussels:20260425T104500
 SUMMARY:✓ 12km – Lange Duurloop
@@ -151,7 +151,7 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-04-29-interval@stravacoach
-DTSTAMP:20260429T192201Z
+DTSTAMP:20260504T131548Z
 DTSTART;TZID=Europe/Brussels:20260429T180000
 DTEND;TZID=Europe/Brussels:20260429T192000
 SUMMARY:✓ 7km – Intervaltraining 5×3min
@@ -189,7 +189,7 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-04-30-heuvel@stravacoach
-DTSTAMP:20260429T192201Z
+DTSTAMP:20260504T131548Z
 DTSTART;TZID=Europe/Brussels:20260430T180000
 DTEND;TZID=Europe/Brussels:20260430T193000
 SUMMARY:Heuvelloop 10 km
@@ -227,7 +227,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-02-lange-duurloop@stravacoach
-DTSTAMP:20260429T192201Z
+DTSTAMP:20260504T131548Z
 DTSTART;TZID=Europe/Brussels:20260502T090000
 DTEND;TZID=Europe/Brussels:20260502T110000
 SUMMARY:14km – Lange Duurloop
@@ -265,40 +265,42 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-02-herstel-test@stravacoach
-DTSTAMP:20260429T192201Z
+DTSTAMP:20260504T131548Z
 DTSTART;TZID=Europe/Brussels:20260502T090000
 DTEND;TZID=Europe/Brussels:20260502T093000
-SUMMARY:Testloopje 3 km – Voet check
-DESCRIPTION:# Sessie: Testloopje 3 km – Voet check\n\n**Datum:** za 2 mei
-  2026\, 09:00–09:30  \n**Blok:** 1 — Aerobe Basis  \n**Week:** 3  \n**
- Type:** Herstel / Test  \n**Afstand:** 3 km  \n**Duur:** ~25 min  \n**Stat
- us:** Gepland\n**Voltooid:** nee\n**Context:** Vervangt de uitgestelde 14 
- km lange duurloop. Enkel uitvoeren als de voet 100% klachtenvrij is.\n\n##
-  Doel\n\nBevestigen dat de rechtervoetontsteeking (onderkant/holvoet\, 29 
- april) geen beletsel meer vormt voor volledig hervatten van de training.\n
- \n## Intentie\n\nGeen training — een test. 3 km is genoeg om te weten of
-  de voet klaar is. Geen ego\, geen kilometers verzamelen. Als er ook maar 
- een vage sensatie is: stoppen en nog een dag rust pakken.\n\n## Uitvoering
- \n\n**Startconditie (verplicht)**\n\n- Geen ochtendsijfheid in de eerste s
- tappen na het slapen → ga lopen\n- Wel ochtendsijfheid of drukgevoelighe
- id bij palpatie van het holvoet → niet lopen\, 1 dag extra rust\n\n**Loo
- p zelf**\n\n- 5 min wandelen als opwarming\n- 3 km heel rustig (7:15–7:3
- 0/km)\n- Hartslag: Zone 1–2 (<140 bpm)\n- RPE: 2–3 — wandeltempo met
-  iets meer vaart\n- Stop onmiddellijk bij pijn of ongemak in de voet\n\n**
- Na de loop**\n\n- Voet OK → 14 km lange duurloop op 5 mei gaat door\n- V
- oet niet OK → extra rust\, 14 km vervalt\, door naar teruglaadweek (6 + 
- 9 mei)\n\n## Richtwaarden\n\n| Parameter | Richtlijn              |\n| ---
- ------ | ---------------------- |\n| Tempo     | 7:15–7:30/km           
- |\n| Hartslag  | <140 bpm               |\n| RPE       | 2–3            
-         |\n| Grens     | Enig voetpijn = stoppen |\n\n## Coach-noot\n\nDit
-  is geen trainingsdag — het is een go/no-go beslissing. De 14 km is niet
-  verloren\, enkel verschoven. Geduld hier loont dubbel: een herval zou 1
- –2 weken kosten.\n
-STATUS:CONFIRMED
+SUMMARY:✓ Testloopje 3 km – Voet check
+DESCRIPTION:✓ VOLTOOID\n\n# Sessie: Testloopje 3 km – Voet check\n\n**D
+ atum:** za 2 mei 2026\, 09:00–09:30  \n**Blok:** 1 — Aerobe Basis  \n*
+ *Week:** 3  \n**Type:** Herstel / Test  \n**Afstand:** 3 km  \n**Duur:** ~
+ 25 min  \n**Status:** Voltooid — no-go\n**Voltooid:** ja (3 mei 2026\, 6
+ 52m)\n**Resultaat:** Voetpijn na ±652m\, loop gestaakt. Go/no-go = NO. 14
+ km op 5 mei vervalt.\n**Context:** Vervangt de uitgestelde 14 km lange duu
+ rloop. Enkel uitvoeren als de voet 100% klachtenvrij is.\n\n## Doel\n\nBev
+ estigen dat de rechtervoetontsteeking (onderkant/holvoet\, 29 april) geen 
+ beletsel meer vormt voor volledig hervatten van de training.\n\n## Intenti
+ e\n\nGeen training — een test. 3 km is genoeg om te weten of de voet kla
+ ar is. Geen ego\, geen kilometers verzamelen. Als er ook maar een vage sen
+ satie is: stoppen en nog een dag rust pakken.\n\n## Uitvoering\n\n**Startc
+ onditie (verplicht)**\n\n- Geen ochtendsijfheid in de eerste stappen na he
+ t slapen → ga lopen\n- Wel ochtendsijfheid of drukgevoeligheid bij palpa
+ tie van het holvoet → niet lopen\, 1 dag extra rust\n\n**Loop zelf**\n\n
+ - 5 min wandelen als opwarming\n- 3 km heel rustig (7:15–7:30/km)\n- Har
+ tslag: Zone 1–2 (<140 bpm)\n- RPE: 2–3 — wandeltempo met iets meer v
+ aart\n- Stop onmiddellijk bij pijn of ongemak in de voet\n\n**Na de loop**
+ \n\n- Voet OK → 14 km lange duurloop op 5 mei gaat door\n- Voet niet OK 
+ → extra rust\, 14 km vervalt\, door naar teruglaadweek (6 + 9 mei)\n\n##
+  Richtwaarden\n\n| Parameter | Richtlijn              |\n| --------- | ---
+ ------------------- |\n| Tempo     | 7:15–7:30/km           |\n| Hartsla
+ g  | <140 bpm               |\n| RPE       | 2–3                    |\n|
+  Grens     | Enig voetpijn = stoppen |\n\n## Coach-noot\n\nDit is geen tra
+ iningsdag — het is een go/no-go beslissing. De 14 km is niet verloren\, 
+ enkel verschoven. Geduld hier loont dubbel: een herval zou 1–2 weken kos
+ ten.\n
+STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-03-kracht@stravacoach
-DTSTAMP:20260429T192201Z
+DTSTAMP:20260504T131548Z
 DTSTART;TZID=Europe/Brussels:20260503T100000
 DTEND;TZID=Europe/Brussels:20260503T104500
 SUMMARY:Kracht & Stabiliteit – Bergfocus
@@ -337,108 +339,91 @@ DESCRIPTION:# Sessie: Kracht & Stabiliteit – Bergfocus\n\n**Datum:** zo 3
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:stravacoach-2026-05-05-lange-duurloop@stravacoach
-DTSTAMP:20260429T192201Z
+UID:stravacoach-2026-05-05-fietsen-cross-training@stravacoach
+DTSTAMP:20260504T131548Z
 DTSTART;TZID=Europe/Brussels:20260505T180000
-DTEND;TZID=Europe/Brussels:20260505T200000
-SUMMARY:14km – Lange Duurloop (herscheduled)
-DESCRIPTION:# Sessie: 14km – Lange Duurloop (herscheduled)\n\n**Datum:** 
- di 5 mei 2026\, 18:00–20:00  \n**Blok:** 1 — Aerobe Basis  \n**Week:**
-  3 (verlengd)  \n**Type:** Lange duurloop  \n**Afstand:** 14 km  \n**Duur:
- ** ~2u  \n**Status:** Gepland (afhankelijk van testloopje 2 mei)\n**Voltoo
- id:** nee\n**Context:** Verplaatst van 2 mei wegens voetpijn (rechter holv
- oet). Enkel uitvoeren als testloopje van 2 mei zonder klachten verlopen is
- .\n\n## Doel\n\nNieuw trainings-PR: 14 km. Puur aerobe opbouw — rustig e
- n geduldig. Dit is de langste loop tot nu toe.\n\n## Intentie\n\n14 km op 
- Zone 2 is een serieuze aerobe prikkel. Het gaat om tijd op de benen opbouw
- en\, niet om snelheid. Voeding en drinken beginnen een rol te spelen bij l
- ooptijden boven 75 min — dit is het moment om dat te beginnen oefenen vo
- or de bergen.\n\n**Extra aandacht:** Dit is de eerste lange loop na de voe
- tpijn van 29 april. Eerste 3 km bewust langzamer dan normaal (7:15–7:30/
- km). Stop bij enig signaal vanuit de voet.\n\n## Uitvoering\n\n**Opwarming
-  (8 min)**\n\n- 3 min wandelen\n- 5 min heel rustig inlopen\n\n**Kern (80
- –90 min)**\n\n- 14 km constant tempo\n- Tempo: 6:55–7:15/km\n- Hartsla
- g: Zone 2 (135–148 bpm)\n- RPE: 4 — conversatietempo de hele loop\n- K
- m 1–3: extra rustig (7:15–7:30/km) — voet observeren\n- Km 3–10: r
- itme vasthouden\n- Km 10–14: als het goed gaat\, mag je licht versnellen
-  (niet onder 6:40/km)\n\n**Voeding en drinken**\n\n- 300–500 ml water me
- e\n- Overweeg een klein tussendoortje rond km 9 (banaan\, dadels)\n\n**Coo
- ling down (10 min)**\n\n- 5 min rustig uitlopen\n- 5 min wandelen + stretc
- hen (kuiten\, hamstrings\, heupen)\n- Specifiek: kuitstretch + voetzoolmas
- sage na afloop\n\n## Richtwaarden\n\n| Parameter | Richtlijn              
-      |\n| --------- | --------------------------- |\n| Tempo     | 6:55–
- 7:15/km                |\n| Hartslag  | 135–148 bpm (Zone 2)        |\n|
-  RPE       | 4                           |\n| Km 1–3    | Extra rustig 
- — voet check   |\n| Grens     | Enig voetpijn = direct stop |\n\n## Succ
- escriterium\n\nLoop afgerond op Zone 2 zonder klachten in de voet. Als de 
- HR de hele loop onder 148 blijft en de voet aanvoelt: perfect.\n\n## Coach
- -noot\n\nVO2max-verhoging = efficiënter ademhalen op hoogte. Dit is de in
- vestering voor de Dolomieten. De vertraging van 3 dagen is verwaarloosbaar
-  — beter 14 km op 5 mei dan een herval die 2 weken kost.\n
+DTEND;TZID=Europe/Brussels:20260505T193000
+SUMMARY:Fietsen – Aerobe Onderhoud (vervangt 14km lange duurloop)
+DESCRIPTION:# Sessie: Fietsen – Aerobe Onderhoud (vervangt 14km lange duu
+ rloop)\n\n**Datum:** di 5 mei 2026\, 18:00–19:30  \n**Blok:** 1 — Aero
+ be Basis  \n**Week:** 3 (verlengd)  \n**Type:** Fietsen (cross-training)  
+ \n**Duur:** ~60–90 min  \n**Status:** Gepland  \n**Voltooid:** nee  \n**
+ Context:** Vervangt de 14km lange duurloop. Rechtervoetpijn (holvoet/plant
+ aire fascia) liet geen verdere loopactiviteit toe — pijn na 652m op 3 me
+ i. Fietsen heeft nagenoeg nul slagbelasting op de voetzool en laat de voet
+  herstellen terwijl de aerobe basis intact blijft.\n\n## Doel\n\nAerobe ba
+ sis onderhouden zonder impactbelasting op de rechtervoet. De 14km wordt ve
+ rschoven naar Blok 2 als eerste lange loop.\n\n## Uitvoering\n\n- 60–90 
+ min fietsen op Zone 2 (HR 135–152 bpm)\n- Tempo aanpassen aan gevoel —
+  geen specifiek wattdoel\n- RPE: 3–4 — comfortabel\, conversatietempo\
+ n- Let op: geen pijn in rechtervoet tijdens of na het fietsen? Dan is het 
+ schema op de goede weg.\n\n## Richtwaarden\n\n| Parameter | Richtlijn     
+    |\n| --------- | ---------------- |\n| Duur      | 60–90 min        |
+ \n| Hartslag  | 135–152 bpm      |\n| RPE       | 3–4              |\n
+ | Impactbelasting | Geen       |\n\n## Coach-noot\n\nFietsen is de juiste 
+ keuze. Je houdt cardiovasculaire conditie op peil terwijl de voet volledig
+  kan herstellen. De 14km is niet verloren — die volgt in Blok 2 als eers
+ te lange loop. Patroon van terugkerende pijn (29 april en 3 mei) vraagt om
+  geduld. Overweeg een kinesist als de pijn opnieuw terugkomt na hervatten 
+ van het lopen.\n
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:stravacoach-2026-05-06-duurloop@stravacoach
-DTSTAMP:20260429T192201Z
+UID:stravacoach-2026-05-06-fietsen-cross-training@stravacoach
+DTSTAMP:20260504T131548Z
 DTSTART;TZID=Europe/Brussels:20260506T180000
 DTEND;TZID=Europe/Brussels:20260506T190000
-SUMMARY:6km – Rustige Duurloop + Strides (Teruglaadweek)
-DESCRIPTION:# Sessie: 6km – Rustige Duurloop + Strides (Teruglaadweek)\n\
- n**Datum:** wo 6 mei 2026\, 18:00–19:00  \n**Blok:** 1 — Aerobe Basis 
-  \n**Week:** 4 — Teruglaadweek  \n**Type:** Duurloop  \n**Afstand:** 6 k
- m  \n**Duur:** ~1u  \n**Status:** Gepland\n**Voltooid:** nee\n\n## Doel\n\
- nActief herstel. Licht en ontspannen lopen met een paar strides om het loo
- pgevoel scherp te houden.\n\n## Intentie\n\nTeruglaadweken zijn essentieel
- : spiervezels repareren\, glycogeen vult aan\, pezen verstevigen. Dit is g
- een luiheid — het is slim trainen. De strides houden de neuromusculaire 
- activatie intact zonder de herstelstatus te verstoren.\n\n## Uitvoering\n\
- n**Opwarming (8 min)**\n\n- 3 min wandelen\n- 5 min rustig inlopen\n\n**Ke
- rn (28 min)**\n\n- 5 km rustig doorlopen\n- Tempo: 7:00–7:20/km\n- Harts
- lag: Zone 1–2 (<148 bpm)\n- RPE: 3–4 — echt gemakkelijk\n\n**Strides
- **\n\n- 4 × 20 sec versnellen (85% sprint)\n- 60 sec wandelherstel\n\n**C
- ooling down (5 min)**\n\n- Rustig uitlopen\n\n## Richtwaarden\n\n| Paramet
- er | Richtlijn                       |\n| --------- | --------------------
- ----------- |\n| Tempo     | 7:00–7:20/km                    |\n| Hartsl
- ag  | <148 bpm (Zone 1–2)             |\n| RPE       | 3–4            
-                  |\n| Intentie  | Frisser vertrekken dan aankomen |\n\n## 
- Coach-noot\n\nNa 3 weken opbouw heeft het lichaam rust nodig. De verleidin
- g om "er nog wat uit te halen" overwinnen is even belangrijk als de traini
- ng zelf. Het plan past zich aan na deze week — Blok 2 begint met hogere 
- intensiteit.\n
+SUMMARY:Fietsen – Actief Herstel (vervangt 6km duurloop + strides)
+DESCRIPTION:# Sessie: Fietsen – Actief Herstel (vervangt 6km duurloop + s
+ trides)\n\n**Datum:** wo 6 mei 2026\, 18:00–19:00  \n**Blok:** 1 — Aer
+ obe Basis  \n**Week:** 4 — Teruglaadweek  \n**Type:** Fietsen (cross-tra
+ ining)  \n**Duur:** ~45–60 min  \n**Status:** Gepland  \n**Voltooid:** n
+ ee  \n**Context:** Vervangt 6km duurloop + strides wegens rechtervoetpijn.
+  Fietsen als impactvrije vervanger.\n\n## Doel\n\nActief herstel en aerobe
+  onderhoud. Rustig\, bewust laag tempo — dit is een teruglaaddag.\n\n## 
+ Uitvoering\n\n- 45–60 min fietsen\n- Heel rustig — Zone 1–2 (HR <148
+  bpm)\n- RPE: 2–3 — ontspannen\n- Geen noodzaak om te pushen\n\n## Ric
+ htwaarden\n\n| Parameter | Richtlijn        |\n| --------- | -------------
+ --- |\n| Duur      | 45–60 min        |\n| Hartslag  | <148 bpm         
+ |\n| RPE       | 2–3              |\n\n## Coach-noot\n\nTeruglaaddag —
+  dus ook op de fiets bewust rustig blijven. Het gaat om bloedcirculatie en
+  herstel\, niet om training.\n
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:stravacoach-2026-05-09-lange-duurloop@stravacoach
-DTSTAMP:20260429T192201Z
+UID:stravacoach-2026-05-09-test-fietsen-cross-training@stravacoach
+DTSTAMP:20260504T131548Z
 DTSTART;TZID=Europe/Brussels:20260509T090000
 DTEND;TZID=Europe/Brussels:20260509T103000
-SUMMARY:12km – Rustige Duurloop (Teruglaadweek)
-DESCRIPTION:# Sessie: 12km – Rustige Duurloop (Teruglaadweek)\n\n**Datum:
- ** za 9 mei 2026\, 09:00–10:30  \n**Blok:** 1 — Aerobe Basis  \n**Week
- :** 4 — Teruglaadweek  \n**Type:** Lange duurloop  \n**Afstand:** 12 km 
-  \n**Duur:** ~1u30  \n**Status:** Gepland\n**Voltooid:** nee\n\n## Doel\n\
- nRustige lange loop op gereduceerd volume. 12 km in plaats van 14+. Puur a
- erobe herstelrun — bewust minder\, bewust rustiger.\n\n## Intentie\n\nNa
-  de 14 km van week 3 is 12 km een bewuste afbouw. Het volume daalt\, de ha
- rtslag mag zelfs iets lager dan normaal. Dit is geen inzinking — het is 
- de teruglaadweek die maakt dat het lichaam sterker uit Blok 1 komt dan het
-  ingegaan is.\n\n## Uitvoering\n\n**Opwarming (8 min)**\n\n- 3 min wandele
- n\n- 5 min rustig inlopen\n\n**Kern (68–75 min)**\n\n- 12 km constant en
-  rustig\n- Tempo: 7:00–7:20/km\n- Hartslag: Zone 2 (135–150 bpm) — l
- iefst onder 148\n- RPE: 4 — gemakkelijk lopen\n\n**Cooling down (8 min)*
- *\n\n- 5 min uitlopen\n- 3 min wandelen + stretchen\n\n## Richtwaarden\n\n
- | Parameter | Richtlijn                    |\n| --------- | --------------
- -------------- |\n| Tempo     | 7:00–7:20/km                 |\n| Hartsl
- ag  | 135–148 bpm                  |\n| RPE       | 4                   
-          |\n| Gevoel    | Licht — geniet van het lopen |\n\n## Coach-noo
- t\n\nDit is de laatste lange loop van Blok 1. Na deze week start Blok 2 me
- t hogere intensiteit. Geniet van de rust — volgende week wordt het pitti
- ger.\n
+SUMMARY:Testloop 3km + Fietsen (vervangt 12km lange duurloop)
+DESCRIPTION:# Sessie: Testloop 3km + Fietsen (vervangt 12km lange duurloop)
+ \n\n**Datum:** za 9 mei 2026\, 09:00–10:30  \n**Blok:** 1 — Aerobe Bas
+ is  \n**Week:** 4 — Teruglaadweek  \n**Type:** Test + Fietsen (cross-tra
+ ining)  \n**Status:** Gepland  \n**Voltooid:** nee  \n**Context:** Vervang
+ t 12km lange duurloop wegens rechtervoetpijn. Na 4–5 dagen rust en fiets
+ en: voorzichtige testloop. Als voet geen pijn geeft → 14km kan de week d
+ aarna in Blok 2.\n\n## Doel\n\nGo/no-go beslissing voor Blok 2. Is de rech
+ tervoet klaar om te hervatten?\n\n## Uitvoering\n\n**Optie A — voet voll
+ edig pijnvrij bij opstaan:**\n\n1. 5 min wandelen als opwarming\n2. 3 km h
+ eel rustig (7:15–7:30/km\, Zone 1–2\, <140 bpm)\n3. Stop onmiddellijk 
+ bij enig voetgevoel\n4. Daarna 30–45 min rustig fietsen als aanvulling\n
+ 5. Resultaat: ✅ Blok 2 kan starten met lopen\n\n**Optie B — nog enige 
+ voetgevoeligheid:**\n\n1. Geen testloop\n2. 60–75 min rustig fietsen (Zo
+ ne 2)\n3. 14km verschuift verder in Blok 2\n4. Overweeg kinesist voor de s
+ tart van Blok 2\n\n## Richtwaarden testloop\n\n| Parameter | Richtlijn    
+            |\n| --------- | ----------------------- |\n| Tempo     | 7:15
+ –7:30/km            |\n| Hartslag  | <140 bpm                |\n| RPE   
+     | 2–3                     |\n| Grens     | Enig voetpijn = stoppen |
+ \n\n## Coach-noot\n\nDit is de derde go/no-go test voor dezelfde voetpijn.
+  Twee vorige tests (2 mei gepland\, 3 mei uitgevoerd) eindigden met pijn. 
+ Wees streng met jezelf: bij de minste twijfel kies je voor fietsen. Blok 2
+  start 13 mei — 4 extra dagen rust maakt je geen conditie slechter\, een
+  herval wel.\n
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-10-kracht@stravacoach
-DTSTAMP:20260429T192201Z
+DTSTAMP:20260504T131548Z
 DTSTART;TZID=Europe/Brussels:20260510T100000
 DTEND;TZID=Europe/Brussels:20260510T104000
 SUMMARY:Kracht & Stabiliteit – Licht Onderhoud (Teruglaadweek)
@@ -465,7 +450,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-07-20-goal@stravacoach
-DTSTAMP:20260429T192201Z
+DTSTAMP:20260504T131548Z
 DTSTART;VALUE=DATE:20260720
 DTEND;VALUE=DATE:20260721
 SUMMARY:🎯 Mountain hiking in the Dolomites

@@ -14,8 +14,8 @@ Dit blok legt het fundament. Geen haast, geen intensiteit — het gaat om aerobe
 |---:|---|---|---|---|
 | 1 | 16/4 – 20/4 | Aerobe basis, strides | 11 km | 6 km duurloop + strides |
 | 2 | 22/4 – 27/4 | Fartlek, volume opbouw | 12 km | 7 km fartlek |
-| 3 | 29/4 – 4/5 | Eerste intervallen, 14 km PR | 14 km | 7 km interval 5x3min (optioneel) |
-| 4 | 6/5 – 11/5 | Teruglaadweek | 12 km | 6 km rustig + strides |
+| 3 | 29/4 – 4/5 | Eerste intervallen, 14 km PR | ~~14 km~~ → fietsen | Afgebroken wegens rechtervoetpijn |
+| 4 | 6/5 – 11/5 | Herstel + cross-training | Fietsen / testloop 9 mei | 14 km verschoven naar Blok 2 |
 
 ## Richtwaarden dit blok
 
@@ -42,3 +42,5 @@ Zie `plan/sessions/block_01/` voor alle individuele sessiedetails.
 ## Overgang naar Blok 2
 
 Blok 2 start 13 mei. Intentie: intensiteit opvoeren met tempolopen en 6x3min intervallen, lange loop doorgroeien naar 18 km.
+
+**Let op:** De 14km lange duurloop is niet afgerond in Blok 1. Wegens terugkerende rechtervoetpijn (holvoet/plantaire fascia, 29 april en 3 mei) zijn week 3 en 4 gedeeltelijk vervangen door fietsen. De 14km wordt de eerste lange loop van Blok 2, mits voet pijnvrij is op 9 mei testloop. Als de pijn opnieuw terugkomt: kinesist raadplegen voor start Blok 2.

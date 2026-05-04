@@ -6,8 +6,9 @@
 **Type:** Herstel / Test  
 **Afstand:** 3 km  
 **Duur:** ~25 min  
-**Status:** Gepland
-**Voltooid:** nee
+**Status:** Voltooid — no-go
+**Voltooid:** ja (3 mei 2026, 652m)
+**Resultaat:** Voetpijn na ±652m, loop gestaakt. Go/no-go = NO. 14km op 5 mei vervalt.
 **Context:** Vervangt de uitgestelde 14 km lange duurloop. Enkel uitvoeren als de voet 100% klachtenvrij is.
 
 ## Doel
