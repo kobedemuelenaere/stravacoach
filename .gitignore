@@ -1,0 +1,17 @@
+# Personal data — training sessions, plans, goals, recovery
+sessions/
+athlete/
+goals/
+plan/
+recovery/
+
+# Environment
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Claude local settings
+.claude/settings.local.json
+.claude/worktrees/
