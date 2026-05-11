@@ -4,9 +4,9 @@
 **Blok:** 1 — Aerobe Basis  
 **Week:** 4 — Teruglaadweek  
 **Type:** Test + Fietsen (cross-training)  
-**Status:** Gepland  
+**Status:** Overgeslagen  
 **Voltooid:** nee  
-**Context:** Vervangt 12km lange duurloop wegens rechtervoetpijn. Na 4–5 dagen rust en fietsen: voorzichtige testloop. Als voet geen pijn geeft → 14km kan de week daarna in Blok 2.
+**Reden overgeslagen:** Atleet was bezig met kitesurfen (2 zware sessies op 10 mei) en had geen tijd voor de geplande testloop. De geplande fietsweek (5–9 mei) is ook niet gebeurd — enkel kiten. Testloop verschoven naar 14 of 15 mei. Zie session_2026-05-14_testloop-3km.md.
 
 ## Doel
 

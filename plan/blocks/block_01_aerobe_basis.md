@@ -15,7 +15,7 @@ Dit blok legt het fundament. Geen haast, geen intensiteit — het gaat om aerobe
 | 1 | 16/4 – 20/4 | Aerobe basis, strides | 11 km | 6 km duurloop + strides |
 | 2 | 22/4 – 27/4 | Fartlek, volume opbouw | 12 km | 7 km fartlek |
 | 3 | 29/4 – 4/5 | Eerste intervallen, 14 km PR | ~~14 km~~ → fietsen | Afgebroken wegens rechtervoetpijn |
-| 4 | 6/5 – 11/5 | Herstel + cross-training | Fietsen / testloop 9 mei | 14 km verschoven naar Blok 2 |
+| 4 | 6/5 – 11/5 | Herstel + cross-training | Testloop overgeslagen (hielwonden) | Fietsen niet uitgevoerd — enkel kiten |
 
 ## Richtwaarden dit blok
 
