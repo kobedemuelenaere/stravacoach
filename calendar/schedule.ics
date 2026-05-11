@@ -24,7 +24,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:stravacoach-2026-04-16-duurloop@stravacoach
-DTSTAMP:20260511T095153Z
+DTSTAMP:20260511T180606Z
 DTSTART;TZID=Europe/Brussels:20260416T180000
 DTEND;TZID=Europe/Brussels:20260416T191500
 SUMMARY:✓ 6km – Rustige Duurloop + Strides
@@ -55,7 +55,7 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-04-19-lange-duurloop@stravacoach
-DTSTAMP:20260511T095153Z
+DTSTAMP:20260511T180606Z
 DTSTART;TZID=Europe/Brussels:20260419T090000
 DTEND;TZID=Europe/Brussels:20260419T104500
 SUMMARY:✓ 11km – Lange Duurloop
@@ -86,7 +86,7 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-04-22-fartlek@stravacoach
-DTSTAMP:20260511T095153Z
+DTSTAMP:20260511T180606Z
 DTSTART;TZID=Europe/Brussels:20260422T180000
 DTEND;TZID=Europe/Brussels:20260422T191500
 SUMMARY:✓ 7km – Fartlek
@@ -122,7 +122,7 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-04-25-lange-duurloop@stravacoach
-DTSTAMP:20260511T095153Z
+DTSTAMP:20260511T180606Z
 DTSTART;TZID=Europe/Brussels:20260425T090000
 DTEND;TZID=Europe/Brussels:20260425T104500
 SUMMARY:✓ 12km – Lange Duurloop
@@ -151,7 +151,7 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-04-29-interval@stravacoach
-DTSTAMP:20260511T095153Z
+DTSTAMP:20260511T180606Z
 DTSTART;TZID=Europe/Brussels:20260429T180000
 DTEND;TZID=Europe/Brussels:20260429T192000
 SUMMARY:✓ 7km – Intervaltraining 5×3min
@@ -189,7 +189,7 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-02-herstel-test@stravacoach
-DTSTAMP:20260511T095153Z
+DTSTAMP:20260511T180606Z
 DTSTART;TZID=Europe/Brussels:20260502T090000
 DTEND;TZID=Europe/Brussels:20260502T093000
 SUMMARY:✓ Testloopje 3 km – Voet check
@@ -224,7 +224,7 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-05-fietsen-cross-training@stravacoach
-DTSTAMP:20260511T095153Z
+DTSTAMP:20260511T180606Z
 DTSTART;TZID=Europe/Brussels:20260505T180000
 DTEND;TZID=Europe/Brussels:20260505T193000
 SUMMARY:Fietsen – Aerobe Onderhoud (vervangt 14km lange duurloop)
@@ -254,7 +254,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-06-fietsen-cross-training@stravacoach
-DTSTAMP:20260511T095153Z
+DTSTAMP:20260511T180606Z
 DTSTART;TZID=Europe/Brussels:20260506T180000
 DTEND;TZID=Europe/Brussels:20260506T190000
 SUMMARY:Fietsen – Actief Herstel (vervangt 6km duurloop + strides)
@@ -276,7 +276,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-09-test-fietsen-cross-training@stravacoach
-DTSTAMP:20260511T095153Z
+DTSTAMP:20260511T180606Z
 DTSTART;TZID=Europe/Brussels:20260509T090000
 DTEND;TZID=Europe/Brussels:20260509T103000
 SUMMARY:Testloop 3km + Fietsen (vervangt 12km lange duurloop)
@@ -308,7 +308,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-10-kracht@stravacoach
-DTSTAMP:20260511T095153Z
+DTSTAMP:20260511T180606Z
 DTSTART;TZID=Europe/Brussels:20260510T100000
 DTEND;TZID=Europe/Brussels:20260510T104000
 SUMMARY:Kracht & Stabiliteit – Licht Onderhoud (Teruglaadweek)
@@ -335,62 +335,63 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-14-diagnostische-testloop@stravacoach
-DTSTAMP:20260511T095153Z
+DTSTAMP:20260511T180606Z
 DTSTART;VALUE=DATE:20260514
 DTEND;VALUE=DATE:20260515
-SUMMARY:Testloop 3 km (derde poging)
-DESCRIPTION:# Sessie: Testloop 3 km (derde poging)\n\n**Datum:** do 14 mei 
- 2026 (congé) — ochtend\, vóór klimsessie  \n**Blok:** 1 → 2 overgan
- g  \n**Type:** Diagnostische testloop  \n**Status:** Gepland  \n**Voltooid
- :** nee  \n**Context:** Derde go/no-go poging. Eerste twee: 29 april (11.4
-  km\, pijn boog)\, 3 mei (652m\, pijn boog). Testloop overgeslagen op 9 me
- i (kite/druk). Extra complicatie: oppervlakkige hielwonden van shells (kit
- edag 10 mei) — wacht tot deze duidelijk pijnvrij aanvoelen bij normaal s
- tappen voor je begint.\n\n## Startcriteria (beiden vereist)\n\n1. **Hielen
- ** voelen pijnvrij aan bij gewoon stappen (shellwondjes geheeld)\n2. **Rec
- htervoetboog** geen ochtendpijn bij opstaan\n\nAls een van beide twijfelac
- htig is → nog een dag wachten.\n\n## Uitvoering\n\n1. 5 min wandelen als
-  opwarming\n2. 3 km heel rustig (7:15–7:30/km\, Zone 1–2\, <140 bpm)\n
- 3. **Stop onmiddellijk bij enig voetgevoel** — ook bij twijfel\n4. 30 mi
- n rustig fietsen of wandelen achteraf\n\n## Richtwaarden\n\n| Parameter | 
- Richtlijn |\n|---|---|\n| Tempo | 7:15–7:30/km |\n| Hartslag | <140 bpm 
- |\n| RPE | 2–3 |\n| Grens | Enig voetpijn = stoppen |\n\n## Interpretati
- e\n\n- **Geen pijn** → Blok 2 start ma 19 of di 20 mei met easy 5–6 km
-  duurloop\n- **Pijn keert terug** → Kinesist raadplegen. Drie mislukte p
- ogingen is een patroon dat professionele beoordeling vereist.\n\n## Coach-
- noot\n\nDit is de derde poging voor dezelfde blessure. Geen druk zetten 
- — je bent drie weken van running verwijderd maar je aerobe base is niet 
- weg. Een goede testloop is beter dan een vierde herval.\n\nLet specifiek o
- p de **boog** (het gewelfde deel halverwege de voetzool)\, niet de hiel 
- — dat is waar de plantaire fascia zit. Hielgevoel is waarschijnlijk de s
- hellwonden nog.\n
-STATUS:CONFIRMED
+SUMMARY:✓ Testloop 3 km (derde poging)
+DESCRIPTION:✓ VOLTOOID\n\n# Sessie: Testloop 3 km (derde poging)\n\n**Dat
+ um:** do 14 mei 2026 (congé) — ochtend\, vóór klimsessie  \n**Blok:**
+  1 → 2 overgang  \n**Type:** Diagnostische testloop  \n**Status:** Volto
+ oid (vroeger dan gepland)\n**Voltooid:** ja — 11 mei 2026 (3 dagen voor 
+ geplande datum\, 4.16 km i.p.v. 3 km)\n**Resultaat:** GESLAAGD — geen pl
+ antaire fascia pijn. Hielwonden licht voelbaar maar niet belemmerend (voor
+ voetlanding). Go/no-go: GO.\n**Context:** Derde go/no-go poging. Eerste tw
+ ee: 29 april (11.4 km\, pijn boog)\, 3 mei (652m\, pijn boog). Uitgevoerd 
+ de dag na extreme dubbele kitesessie (10 mei). Blok 2 herstart vrijgegeven
+ .\n\n## Startcriteria (beiden vereist)\n\n1. **Hielen** voelen pijnvrij aa
+ n bij gewoon stappen (shellwondjes geheeld)\n2. **Rechtervoetboog** geen o
+ chtendpijn bij opstaan\n\nAls een van beide twijfelachtig is → nog een d
+ ag wachten.\n\n## Uitvoering\n\n1. 5 min wandelen als opwarming\n2. 3 km h
+ eel rustig (7:15–7:30/km\, Zone 1–2\, <140 bpm)\n3. **Stop onmiddellij
+ k bij enig voetgevoel** — ook bij twijfel\n4. 30 min rustig fietsen of w
+ andelen achteraf\n\n## Richtwaarden\n\n| Parameter | Richtlijn |\n|---|---
+ |\n| Tempo | 7:15–7:30/km |\n| Hartslag | <140 bpm |\n| RPE | 2–3 |\n|
+  Grens | Enig voetpijn = stoppen |\n\n## Interpretatie\n\n- **Geen pijn** 
+ → Blok 2 start ma 19 of di 20 mei met easy 5–6 km duurloop\n- **Pijn k
+ eert terug** → Kinesist raadplegen. Drie mislukte pogingen is een patroo
+ n dat professionele beoordeling vereist.\n\n## Coach-noot\n\nDit is de der
+ de poging voor dezelfde blessure. Geen druk zetten — je bent drie weken 
+ van running verwijderd maar je aerobe base is niet weg. Een goede testloop
+  is beter dan een vierde herval.\n\nLet specifiek op de **boog** (het gewe
+ lfde deel halverwege de voetzool)\, niet de hiel — dat is waar de planta
+ ire fascia zit. Hielgevoel is waarschijnlijk de shellwonden nog.\n
+STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
-UID:stravacoach-2026-05-16-easy-duurloop-herstart-na-blessure@stravacoach
-DTSTAMP:20260511T095153Z
-DTSTART;VALUE=DATE:20260516
-DTEND;VALUE=DATE:20260517
+UID:stravacoach-2026-05-14-easy-duurloop-herstart-na-blessure@stravacoach
+DTSTAMP:20260511T180606Z
+DTSTART;VALUE=DATE:20260514
+DTEND;VALUE=DATE:20260515
 SUMMARY:Herstart duurloop 5 km
-DESCRIPTION:# Sessie: Herstart duurloop 5 km\n\n**Datum:** za 17 mei 2026 (
- of vr 16 mei als testloop 14 mei slaagt)  \n**Blok:** 2 — Specifieke Ont
- wikkeling  \n**Week:** 5  \n**Type:** Easy duurloop — herstart na blessu
- re  \n**Status:** Gepland  \n**Voltooid:** nee  \n**Conditie:** Alleen uit
- voeren als testloop (14/15 mei) volledig geslaagd is zonder voetpijn.\n\n#
- # Doel\n\nEerste echte loopsessie van Blok 2. Kort\, rustig\, en informati
- ef: hoe voelt de voet na een volledige sessie? Geen performance\, alleen i
- nformatie.\n\n## Uitvoering\n\n1. 5 min wandelen als opwarming\n2. 5–6 k
- m rustig\, volledig conversatietempo\n3. 5 min uitwandelen\n4. Stop bij en
- ig voetgevoel — dit is nog steeds een voetmonitoringssessie\n\n## Richtw
- aarden\n\n| Parameter | Richtlijn |\n|---|---|\n| Afstand | 5–6 km |\n| 
- Tempo | 7:00–7:20/km |\n| Hartslag | Zone 2 — <150 bpm |\n| RPE | 3–
- 4 |\n\n## Na de sessie\n\nCheck de voet actief: pijn bij afkoelen? Ochtend
- pijn de volgende dag? Dit bepaalt of je dinsdag verder kunt opbouwen.\n
+DESCRIPTION:# Sessie: Herstart duurloop 5 km\n\n**Datum:** do 14 mei 2026  
+ \n**Blok:** 2 — Specifieke Ontwikkeling  \n**Week:** 5  \n**Type:** Easy
+  duurloop — herstart na blessure  \n**Status:** Gepland  \n**Voltooid:**
+  nee  \n**Conditie:** Testloop geslaagd op 11 mei (4.16 km\, geen voetpijn
+ ). Herstart vooruitgeschoven van 16/17 mei naar 14 mei.\n\n## Doel\n\nEers
+ te echte loopsessie van Blok 2. Kort\, rustig\, en informatief: hoe voelt 
+ de voet na een volledige sessie? Geen performance\, alleen informatie.\n\n
+ ## Uitvoering\n\n1. 5 min wandelen als opwarming\n2. 5–6 km rustig\, vol
+ ledig conversatietempo\n3. 5 min uitwandelen\n4. Stop bij enig voetgevoel 
+ — dit is nog steeds een voetmonitoringssessie\n\n## Richtwaarden\n\n| Pa
+ rameter | Richtlijn |\n|---|---|\n| Afstand | 5–6 km |\n| Tempo | 7:00
+ –7:20/km |\n| Hartslag | Zone 2 — <150 bpm |\n| RPE | 3–4 |\n\n## Na
+  de sessie\n\nCheck de voet actief: pijn bij afkoelen? Ochtendpijn de volg
+ ende dag? Dit bepaalt of je dinsdag verder kunt opbouwen.\n
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-20-duurloop-zone-2@stravacoach
-DTSTAMP:20260511T095153Z
+DTSTAMP:20260511T180606Z
 DTSTART;VALUE=DATE:20260520
 DTEND;VALUE=DATE:20260521
 SUMMARY:Duurloop 8 km
@@ -408,7 +409,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-22-lange-duurloop@stravacoach
-DTSTAMP:20260511T095153Z
+DTSTAMP:20260511T180606Z
 DTSTART;VALUE=DATE:20260522
 DTEND;VALUE=DATE:20260523
 SUMMARY:Lange duurloop 12 km
@@ -432,7 +433,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-07-20-goal@stravacoach
-DTSTAMP:20260511T095153Z
+DTSTAMP:20260511T180606Z
 DTSTART;VALUE=DATE:20260720
 DTEND;VALUE=DATE:20260721
 SUMMARY:🎯 Mountain hiking in the Dolomites
