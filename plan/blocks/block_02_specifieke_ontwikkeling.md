@@ -1,7 +1,8 @@
 # Blok 2: Specifieke Ontwikkeling
 
-**Periode:** 13 mei – 8 juni 2026 (week 5–8)  
-**Status:** Gepland (wordt gedetailleerd uitgewerkt na afsluiting Blok 1)  
+**Periode:** 16 mei – 12 juni 2026 (week 5–8, verschoven)  
+**Status:** Gepland — start uitgesteld t.o.v. originele plan (was 13 mei)  
+**Reden uitstel:** Rechtervoetblessure (plantaire fascia) + oppervlakkige hielwonden van kitesurfen op 10 mei maken testloop pas mogelijk op 14–15 mei. Blok 2 start formeel bij slagen testloop.  
 **Doel:** Intensiteit verhogen, tempotraining introduceren, bergspecifiek heuvelwerk
 
 ## Intentie
@@ -12,10 +13,10 @@ Blok 2 bouwt voort op het aerobe fundament van Blok 1. Nieuwe stimuli: tempolope
 
 | Week | Data | Focus | Lange loop | Kwaliteitssessie |
 |---:|---|---|---|---|
-| 5 | 13/5 – 18/5 | Eerste tempoloop | 15 km | 8 km tempoloop (4 km tempoblok) |
-| 6 | 20/5 – 25/5 | Intervallen verzwaard | 16 km (licht heuvelachtig) | 8 km interval 6x3min |
-| 7 | 27/5 – 31/5 | Tempoloop 5 km | 18 km | 8 km tempoloop (5 km tempoblok) |
-| 8 | 3/6 – 8/6 | Teruglaadweek | 14 km | 7 km speelse fartlek |
+| 5 | 16/5 – 22/5 | **Voorzichtige herstart** — voet monitoren | 12 km (geen 15, geen tempo) | 8 km duurloop Zone 2 |
+| 6 | 24/5 – 29/5 | Eerste tempoloop (als voet OK) | 15 km | 8 km tempoloop (4 km tempoblok) |
+| 7 | 31/5 – 5/6 | Intervallen verzwaard | 16 km (licht heuvelachtig) | 8 km interval 6x3min |
+| 8 | 7/6 – 12/6 | Teruglaadweek | 14 km | 7 km speelse fartlek |
 
 ## Richtwaarden (gepland)
 
