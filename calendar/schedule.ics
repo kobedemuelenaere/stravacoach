@@ -24,7 +24,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:stravacoach-2026-04-16-duurloop@stravacoach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;TZID=Europe/Brussels:20260416T180000
 DTEND;TZID=Europe/Brussels:20260416T191500
 SUMMARY:✓ 6km – Rustige Duurloop + Strides
@@ -55,7 +55,7 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-04-19-lange-duurloop@stravacoach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;TZID=Europe/Brussels:20260419T090000
 DTEND;TZID=Europe/Brussels:20260419T104500
 SUMMARY:✓ 11km – Lange Duurloop
@@ -86,7 +86,7 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-04-22-fartlek@stravacoach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;TZID=Europe/Brussels:20260422T180000
 DTEND;TZID=Europe/Brussels:20260422T191500
 SUMMARY:✓ 7km – Fartlek
@@ -122,7 +122,7 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-04-25-lange-duurloop@stravacoach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;TZID=Europe/Brussels:20260425T090000
 DTEND;TZID=Europe/Brussels:20260425T104500
 SUMMARY:✓ 12km – Lange Duurloop
@@ -151,7 +151,7 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-04-29-interval@stravacoach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;TZID=Europe/Brussels:20260429T180000
 DTEND;TZID=Europe/Brussels:20260429T192000
 SUMMARY:✓ 7km – Intervaltraining 5×3min
@@ -189,7 +189,7 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-02-herstel-test@stravacoach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;TZID=Europe/Brussels:20260502T090000
 DTEND;TZID=Europe/Brussels:20260502T093000
 SUMMARY:✓ Testloopje 3 km – Voet check
@@ -224,7 +224,7 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-05-fietsen-cross-training@stravacoach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;TZID=Europe/Brussels:20260505T180000
 DTEND;TZID=Europe/Brussels:20260505T193000
 SUMMARY:Fietsen – Aerobe Onderhoud (vervangt 14km lange duurloop)
@@ -254,7 +254,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-06-fietsen-cross-training@stravacoach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;TZID=Europe/Brussels:20260506T180000
 DTEND;TZID=Europe/Brussels:20260506T190000
 SUMMARY:Fietsen – Actief Herstel (vervangt 6km duurloop + strides)
@@ -276,7 +276,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-09-test-fietsen-cross-training@stravacoach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;TZID=Europe/Brussels:20260509T090000
 DTEND;TZID=Europe/Brussels:20260509T103000
 SUMMARY:Testloop 3km + Fietsen (vervangt 12km lange duurloop)
@@ -308,7 +308,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-10-kracht@stravacoach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;TZID=Europe/Brussels:20260510T100000
 DTEND;TZID=Europe/Brussels:20260510T104000
 SUMMARY:Kracht & Stabiliteit – Licht Onderhoud (Teruglaadweek)
@@ -335,7 +335,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-14-diagnostische-testloop@stravacoach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;VALUE=DATE:20260514
 DTEND;VALUE=DATE:20260515
 SUMMARY:✓ Testloop 3 km (derde poging)
@@ -369,7 +369,7 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-14-easy-duurloop-herstart-na-blessure@stravacoach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;VALUE=DATE:20260514
 DTEND;VALUE=DATE:20260515
 SUMMARY:Herstart duurloop 5 km
@@ -391,7 +391,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-17-easy-duurloop-zone-2-3@stravacoach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;VALUE=DATE:20260517
 DTEND;VALUE=DATE:20260518
 SUMMARY:Easy duurloop 10 km
@@ -415,7 +415,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-19-easy-duurloop-zone-2@stravacoach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;VALUE=DATE:20260519
 DTEND;VALUE=DATE:20260520
 SUMMARY:✓ Easy duurloop 7 km
@@ -433,7 +433,7 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-21-duurloop-zone-2@stravacoach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;VALUE=DATE:20260521
 DTEND;VALUE=DATE:20260522
 SUMMARY:✓ Duurloop 8 km
@@ -452,7 +452,7 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-24-lange-duurloop@stravacoach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;VALUE=DATE:20260524
 DTEND;VALUE=DATE:20260525
 SUMMARY:Lange duurloop 14 km
@@ -484,7 +484,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-27-tempoloop-zone-3-4@stravacoach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;VALUE=DATE:20260527
 DTEND;VALUE=DATE:20260528
 SUMMARY:✓ Tempoloop 8 km
@@ -507,7 +507,7 @@ STATUS:COMPLETED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-29-easy-duurloop-zone-2@stravacoach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;VALUE=DATE:20260529
 DTEND;VALUE=DATE:20260530
 SUMMARY:Easy duurloop 8 km
@@ -525,7 +525,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-05-31-lange-duurloop@stravacoach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;VALUE=DATE:20260531
 DTEND;VALUE=DATE:20260601
 SUMMARY:Lange duurloop 15 km
@@ -544,7 +544,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-06-02-easy-duurloop-zone-2@stravacoach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;VALUE=DATE:20260602
 DTEND;VALUE=DATE:20260603
 SUMMARY:Easy duurloop 8 km
@@ -561,7 +561,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-06-04-intervaltraining-zone-4-5@stravacoach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;VALUE=DATE:20260604
 DTEND;VALUE=DATE:20260605
 SUMMARY:Intervaltraining 8 km — 6×3 min
@@ -583,7 +583,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-06-07-lange-duurloop-licht-heuvelachtig@stravacoach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;VALUE=DATE:20260607
 DTEND;VALUE=DATE:20260608
 SUMMARY:Lange duurloop 16 km (heuvelachtig)
@@ -603,7 +603,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-06-09-herstelloop-zone-1-2@stravacoach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;VALUE=DATE:20260609
 DTEND;VALUE=DATE:20260610
 SUMMARY:Easy herstelloop 6 km
@@ -620,7 +620,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-06-11-fartlek-speels-ongestructureerd@stravacoach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;VALUE=DATE:20260611
 DTEND;VALUE=DATE:20260612
 SUMMARY:Speelse fartlek 7 km
@@ -639,7 +639,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-06-13-lange-duurloop-ingehouden@stravacoach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;VALUE=DATE:20260613
 DTEND;VALUE=DATE:20260614
 SUMMARY:Lange duurloop 13 km
@@ -657,7 +657,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-06-23-easy-duurloop-re-entry-hitte-adaptatie@stravacoa
  ch
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;VALUE=DATE:20260623
 DTEND;VALUE=DATE:20260624
 SUMMARY:Easy heat-shakeout 6 km
@@ -683,35 +683,9 @@ DESCRIPTION:# Sessie: Easy heat-shakeout 6 km\n\n**Datum:** di 23 jun 2026
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:stravacoach-2026-06-24-easy-duurloop-hitte-adaptatie-optioneel@stravaco
- ach
-DTSTAMP:20260623T101830Z
-DTSTART;VALUE=DATE:20260624
-DTEND;VALUE=DATE:20260625
-SUMMARY:Easy hitte-loop 5 km (of rust)
-DESCRIPTION:# Sessie: Easy hitte-loop 5 km (of rust)\n\n**Datum:** wo 24 ju
- n 2026  \n**Blok:** 3 — Piektraining  \n**Week:** 11  \n**Type:** Easy d
- uurloop — hitte-adaptatie (optioneel)  \n**Status:** Gepland  \n**Voltoo
- id:** nee  \n**Afstand:** 5–6 km  \n**Conditie:** 🔥 Voelt als ~40°C.
-  Een van de heetste dagen.\n\n## Doel\n\nOptionele\, heel korte easy loop 
- puur als hitte-adaptatie en bewegingsdrang-uitlaat. Als de ochtend niet vr
- oeg genoeg lukt of de voet niet 100% is: sla over\, doe voet-/kuitband-wer
- k + mobiliteit binnen. Geen verlies — de sleutelsessies staan later deze
-  week.\n\n## Uitvoering\n\n1. Alleen bij dageraad (dauw ~22°C) of niet\n2
- . 5–6 km super easy in het bos/schaduw\n3. Veel drinken voor en na\n\n##
-  Richtwaarden\n\n| Parameter | Richtlijn |\n|---|---|\n| Afstand | 5–6 k
- m (max) |\n| Tempo | op gevoel\, traag |\n| Hartslag | Zone 1–2\, plafon
- d 155 bpm |\n| RPE | 2–3 |\n\n**Hitte:** Dit is geen trainingsprikkel\, 
- het is adaptatie + losmaken. Loop NIET overdag. Stop bij duizeligheid\, ki
- ppenvel of als je stopt met zweten — dat zijn alarmsignalen.\n\n**Altern
- atief (aanrader bij twijfel):** rust + 15 min voet-/kuitrevalidatie met ba
- nd + heupmobiliteit. Dit beschermt de voet voor de lange loop maandag.\n
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
 UID:stravacoach-2026-06-25-trail-duurloop-bos-golvend-hitte-training@strava
  coach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;VALUE=DATE:20260625
 DTEND;VALUE=DATE:20260626
 SUMMARY:Trail/bos duurloop 9 km
@@ -744,82 +718,9 @@ DESCRIPTION:# Sessie: Trail/bos duurloop 9 km\n\n**Datum:** do 25 jun 2026
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:stravacoach-2026-06-26-easy-duurloop-hitte-adaptatie-optioneel@stravaco
- ach
-DTSTAMP:20260623T101830Z
-DTSTART;VALUE=DATE:20260626
-DTEND;VALUE=DATE:20260627
-SUMMARY:Easy hitte-loop 5 km (of rust)
-DESCRIPTION:# Sessie: Easy hitte-loop 5 km (of rust)\n\n**Datum:** vr 26 ju
- n 2026  \n**Blok:** 3 — Piektraining  \n**Week:** 11  \n**Type:** Easy d
- uurloop — hitte-adaptatie (optioneel)  \n**Status:** Gepland  \n**Voltoo
- id:** nee  \n**Afstand:** 5–6 km  \n**Conditie:** 🔥 Voelt als ~40°C.
- \n\n## Doel\n\nOptionele losse easy loop of rust. Net als woensdag: alleen
-  bij dageraad\, puur adaptatie + losmaken. Bij twijfel rust nemen — morg
- en is de heetste dag\, en zondag/maandag staan de echte sessies. Geen held
- endaden in 40°C.\n\n## Uitvoering\n\n1. Alleen vroege ochtend\, bos/schad
- uw\n2. 5–6 km super easy\n3. Drinken voor en na\n\n## Richtwaarden\n\n| 
- Parameter | Richtlijn |\n|---|---|\n| Afstand | 5–6 km (max) |\n| Tempo 
- | traag\, op gevoel |\n| Hartslag | Zone 1–2\, plafond 155 bpm |\n| RPE 
- | 2–3 |\n\n**Hitte:** Geen prikkel\, enkel beweging. Stop bij elk alarms
- ignaal (duizeligheid/kippenvel/geen zweet meer).\n\n**Alternatief:** rust 
- of cross-training in de schaduw/binnen. Spaar de benen en voet voor zondag
-  + maandag.\n
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:stravacoach-2026-06-27-rust-cross-training@stravacoach
-DTSTAMP:20260623T101830Z
-DTSTART;VALUE=DATE:20260627
-DTEND;VALUE=DATE:20260628
-SUMMARY:Rust of cross-training (heetste dag)
-DESCRIPTION:# Sessie: Rust of cross-training (heetste dag)\n\n**Datum:** za
-  27 jun 2026  \n**Blok:** 3 — Piektraining  \n**Week:** 11  \n**Type:** 
- Rust / cross-training  \n**Status:** Gepland  \n**Voltooid:** nee  \n**Con
- ditie:** 🔥🔥 Heetste dag — voelt als ~41°C.\n\n## Doel\n\nNiet lop
- en vandaag. 41°C gevoelstemperatuur is geen trainingsweer — het levert 
- alleen risico en junk-kilometers op. Gebruik de dag om fris aan te komen v
- oor de lange loop van maandag. Het onweer breekt morgenavond.\n\n## Uitvoe
- ring (kies wat past)\n\n- Volledige rust + hydratatie + lichte mobiliteit\
- n- Of cross-training met lage impact in de koelte: zwemmen\, rustig fietse
- n vroeg/laat\, of kitesurfen als de wind er is (let wel: dat telt als bela
- sting — zie hieronder)\n- 15 min voet-/kuitrevalidatie met band als de v
- oet wat aandacht vraagt\n\n## Let op\n\n**Kitesurfen telt als belasting.**
-  Als je gaat kiten vandaag: dat is matige-tot-hoge been-/kernbelasting (zi
- e recovery-log). Houd het kort/rustig zodat maandag de lange loop niet lij
- dt. Log het via `/recovery`.\n\n**Hydratatie:** je begint de zware trainin
- gsweek (zo/ma) pas echt — kom goed gehydrateerd en uitgerust aan.\n
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:stravacoach-2026-06-28-easy-duurloop-terug-naar-normaal-weer@stravacoac
- h
-DTSTAMP:20260623T101830Z
-DTSTART;VALUE=DATE:20260628
-DTEND;VALUE=DATE:20260629
-SUMMARY:Easy duurloop 8 km
-DESCRIPTION:# Sessie: Easy duurloop 8 km\n\n**Datum:** zo 28 jun 2026  \n**
- Blok:** 3 — Piektraining  \n**Week:** 11  \n**Type:** Easy duurloop — 
- terug naar normaal weer  \n**Status:** Gepland  \n**Voltooid:** nee  \n**A
- fstand:** 8–10 km  \n**Conditie:** Onweer breekt de hitte (~32°C\, daal
- t). Eerste "gewone" loopdag — koeler dan de rest van de week.\n\n## Doel
- \n\nVolume terug opbouwen nu de hitte breekt. Vlotte\, comfortabele duurlo
- op om de benen klaar te zetten voor de sleutel-lange-loop van morgen. Niet
-  hard — dit is de dag vóór de belangrijkste sessie van de week.\n\n## 
- Uitvoering\n\n1. Loop wanneer het koelst is (let op timing rond het onweer
-  — niet bij bliksem)\n2. 10 min easy inlopen\n3. 8–10 km comfortabel\,
-  vlak of licht golvend\n4. 5 min uitwandelen\n\n## Richtwaarden\n\n| Param
- eter | Richtlijn |\n|---|---|\n| Afstand | 8–10 km |\n| Tempo | 6:20–6
- :50/km (op gevoel als nog warm) |\n| Hartslag | Zone 2\, plafond 160 bpm |
- \n| RPE | 4 |\n\n**Voet (go/no-go):** Ochtendcheck. Moet schoon zijn — m
- orgen is de lange loop. Twijfel je over de voet\, hou dit kort (6 km) zoda
- t morgen kan doorgaan.\n
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
 UID:stravacoach-2026-06-29-lange-duurloop-trail-bos-hoogtemeters-tijd-op-de
  -benen@stravacoach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;VALUE=DATE:20260629
 DTEND;VALUE=DATE:20260630
 SUMMARY:Lange trail/bos-loop 18–20 km 🏔️
@@ -856,7 +757,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-06-30-herstelloop-easy@stravacoach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;VALUE=DATE:20260630
 DTEND;VALUE=DATE:20260701
 SUMMARY:Herstel-easy 7 km
@@ -874,42 +775,32 @@ DESCRIPTION:# Sessie: Herstel-easy 7 km\n\n**Datum:** di 30 jun 2026  \n**B
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:stravacoach-2026-07-01-intervallen-heuvel-klimkracht@stravacoach
-DTSTAMP:20260623T101830Z
+UID:stravacoach-2026-07-01-herstel-easy-loslopen@stravacoach
+DTSTAMP:20260630T221309Z
 DTSTART;VALUE=DATE:20260701
 DTEND;VALUE=DATE:20260702
-SUMMARY:Heuvelintervallen 8 km
-DESCRIPTION:# Sessie: Heuvelintervallen 8 km\n\n**Datum:** wo 1 jul 2026  \
- n**Blok:** 3 — Piektraining  \n**Week:** 12  \n**Type:** Intervallen —
-  heuvel/klimkracht  \n**Status:** Gepland  \n**Voltooid:** nee  \n**Afstan
- d:** ~8 km  \n**Conditie:** ~29°C — warm maar werkbaar vroeg/laat. De e
- nige echte kwaliteitssessie van het blok.\n\n## Doel\n\nKlimkracht en neur
- omusculaire scherpte — de meest Dolomieten-specifieke intensiteit die er
-  is. Korte\, krachtige klims trainen precies de spieren en het systeem dat
-  je op de berg nodig hebt. Dit vervangt de heuvelintervallen die in week 1
- 0 niet doorgingen.\n\n## Uitvoering\n\n1. 15 min easy inlopen (rustig\, vo
- lledig los)\n2. **6× 2 min bergop** op een stevige helling\, RPE 7–8\, 
- Zone 4 — krachtig maar gecontroleerd\, niet sprinten\n3. Herstel: rustig
-  terug naar beneden joggen/wandelen tussen elke rep (volledig herstel)\n4.
-  10 min easy uitlopen\n\n## Richtwaarden\n\n| Parameter | Richtlijn |\n|--
- -|---|\n| Totaal | ~8 km incl. warm-up/cool-down |\n| Klim-effort | RPE 7
- –8\, Zone 4 (170–178 bpm mag bovenaan de klim) |\n| Herstel | volledig
-  — laat HR zakken tot <140 voor de volgende rep |\n| RPE | 7–8 op de r
- eps |\n\n**Hitte:** Doe dit vroege ochtend of late avond. In de warmte loo
- pt HR sneller op — stuur op gevoel/kracht\, niet op een HR-getal. Slaag 
- je niet om volledig te herstellen tussen reps door de hitte → schrap een
-  rep.\n\n**Voet:** Klimmen belast kuit/voet. Ochtendcheck. Stop bij hielsi
- gnaal — dit is een nuttige sessie maar niet de moeite van een blessure w
- aard.\n\n**Let op (back-to-back):** morgen is krachttraining (zware beenda
- g). Dit + kracht = twee zware beendagen op rij. Dat is bewust (Dolomieten 
- = opeenvolgende dagen belasting)\, maar hou de reps gecontroleerd zodat je
-  morgen nog deftig kan trainen. Voelt de voet/benen niet goed → schaal t
- erug.\n
+SUMMARY:Easy loslopen 5–7 km
+DESCRIPTION:# Sessie: Easy loslopen 5–7 km\n\n**Datum:** wo 1 jul 2026  \
+ n**Blok:** 3 — Piektraining  \n**Week:** 12  \n**Type:** Herstel — eas
+ y loslopen  \n**Status:** Gepland  \n**Voltooid:** nee  \n**Afstand:** 5
+ –7 km  \n**Conditie:** Dag na de eerste halve marathon (21\,14 km\, 30/6
+ ). Benen losmaken.\n\n## Achtergrond — planwijziging\n\nHier stonden oor
+ spronkelijk de heuvelintervallen. Die zijn **verschoven naar zondag 5/7** 
+ (Karel Sabbeberg) omdat ze de ochtend na een 21 km slecht geplaatst waren 
+ (Z4 op verse 21k-benen + voet-waakvlag). Vandaag dus enkel actief herstel.
+ \n\n## Doel\n\nBloed door de benen na de halve. Niets bewijzen — heel ru
+ stig\, voet en algemene vermoeidheid voelen. Mag ook vervangen worden door
+  rust of een wandeling als de benen erom vragen.\n\n## Uitvoering\n\n1. 5 
+ min wandelen\n2. 5–7 km echt easy\, vlak\n3. 5 min uitwandelen\n\n## Ric
+ htwaarden\n\n| Parameter | Richtlijn |\n|---|---|\n| Afstand | 5–7 km |\
+ n| Tempo | 6:40–7:15/km |\n| Hartslag | Zone 1–2\, plafond 150 bpm |\n
+ | RPE | 2–3 |\n\n**Voet:** Naloop-effect van de halve. Stijf/pijnlijk on
+ der de hiel = vandaag rust of wandelen.\n
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-07-02-krachttraining@stravacoach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;VALUE=DATE:20260702
 DTEND;VALUE=DATE:20260703
 SUMMARY:Krachttraining — daalkracht + voet/kuit
@@ -938,87 +829,96 @@ DESCRIPTION:# Sessie: Krachttraining — daalkracht + voet/kuit\n\n**Datum:
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:stravacoach-2026-07-03-herstelloop-easy@stravacoach
-DTSTAMP:20260623T101830Z
-DTSTART;VALUE=DATE:20260703
-DTEND;VALUE=DATE:20260704
-SUMMARY:Herstel-easy 6 km
-DESCRIPTION:# Sessie: Herstel-easy 6 km\n\n**Datum:** vr 3 jul 2026  \n**Bl
- ok:** 3 — Piektraining  \n**Week:** 12  \n**Type:** Herstelloop — easy
-   \n**Status:** Gepland  \n**Voltooid:** nee  \n**Afstand:** 5–6 km  \n*
- *Conditie:** Dag na krachttraining — beenvermoeidheid/DOMS verwacht.\n\n
- ## Doel\n\nLosse herstelloop om de DOMS van de krachttraining eruit te lop
- en. Heel rustig. Als de benen echt stuk zijn: wandelen of rust mag ook —
-  zaterdag/zondag zijn belangrijker.\n\n## Uitvoering\n\n1. 5 min wandelen\
- n2. 5–6 km easy\, vlak\n3. 5 min uitwandelen\n\n## Richtwaarden\n\n| Par
- ameter | Richtlijn |\n|---|---|\n| Afstand | 5–6 km |\n| Tempo | 6:45–
- 7:20/km |\n| Hartslag | Zone 1–2\, plafond 150 bpm |\n| RPE | 2–3 |\n\
- n**Voet:** Ochtendcheck. Bij twijfel rust — de lange loop van zondag is 
- de prioriteit van het weekend.\n
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:stravacoach-2026-07-04-easy-duurloop-strides@stravacoach
-DTSTAMP:20260623T101830Z
-DTSTART;VALUE=DATE:20260704
-DTEND;VALUE=DATE:20260705
-SUMMARY:Easy + strides 6 km
-DESCRIPTION:# Sessie: Easy + strides 6 km\n\n**Datum:** za 4 jul 2026  \n**
- Blok:** 3 — Piektraining  \n**Week:** 12  \n**Type:** Easy duurloop + st
- rides  \n**Status:** Gepland  \n**Voltooid:** nee  \n**Afstand:** 6–7 km
-   \n**Conditie:** ~31°C verwacht — opnieuw warm. Dag vóór de laatste 
- grote lange loop.\n\n## Doel\n\nVlotte\, korte loop met een paar strides o
- m de benen wakker en snel te houden zonder vermoeidheid op te bouwen. Bewu
- st licht — morgen is de laatste sleutel-lange-loop vóór de taper.\n\n#
- # Uitvoering\n\n1. 10 min easy inlopen\n2. 4–5 km comfortabel easy\n3. 4
- –6× 20 sec strides (vlotte\, ontspannen versnelling\, geen sprint)\, vo
- lledig herstel tussendoor\n4. 5 min uitwandelen\n\n## Richtwaarden\n\n| Pa
- rameter | Richtlijn |\n|---|---|\n| Afstand | 6–7 km |\n| Tempo | easy 6
- :30–7:00/km\; strides los en vlot |\n| Hartslag | Zone 2 op easy deel |\
- n| RPE | 3–4 (strides kort hoger) |\n\n**Hitte:** vroeg of laat lopen\, 
- kort houden. **Voet:** ochtendcheck\; strides overslaan bij twijfel.\n
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:stravacoach-2026-07-05-lange-duurloop-trail-maximale-hoogtemeters-daalk
- racht@stravacoach
-DTSTAMP:20260623T101830Z
+UID:stravacoach-2026-07-05-intervallen-heuvel-klimkracht-daalkracht@stravac
+ oach
+DTSTAMP:20260630T221309Z
 DTSTART;VALUE=DATE:20260705
 DTEND;VALUE=DATE:20260706
-SUMMARY:Laatste lange trail-loop — vert + tijd op de benen 🏔️
-DESCRIPTION:# Sessie: Laatste lange trail-loop — vert + tijd op de benen 
- 🏔️\n\n**Datum:** zo 5 jul 2026  \n**Blok:** 3 — Piektraining  \n**W
- eek:** 12  \n**Type:** Lange duurloop — trail\, maximale hoogtemeters\, 
- daalkracht  \n**Status:** Gepland  \n**Voltooid:** nee  \n**Afstand:** 18
- –21 km  \n**Duur:** ~2:30–3:00  \n**Conditie:** Laatste grote lange lo
- op vóór de taper. 3 dagen na de krachttraining ✓.\n\n## Doel\n\nDe **p
- iek-lange-loop** van het hele schema en de meest Dolomieten-specifieke ses
- sie: maximale tijd op de benen + zoveel mogelijk hoogtemeters + bewuste da
- altechniek. Hier vink je idealiter de **"≥500 hoogtemeters in één sess
- ie"** van de Dolomieten-checklist af. Daarna gaat het volume omlaag (taper
- ) — dit is je laatste grote prikkel.\n\n## Uitvoering\n\n1. **Echt koolh
- ydraat-ontbijt.** Voeding elke 30–40 min\, ruim water + elektrolyten mee
-  (warmer terug richting weekend).\n2. Zoek het meest heuvelachtige/klimrij
- ke terrein dat haalbaar is — herhaalde klims tellen op tot veel vert\n3.
-  15 min easy inlopen\n4. 18–21 km / 2\,5–3 u op gevoel\; eerste twee d
- erde strikt Zone 2\n5. **Klim consistent\, daal actief en gecontroleerd** 
- — de afdalingen zijn even belangrijk als de klimmen (quad-kracht voor la
- nge afdalingen in de Dolomieten)\n6. Uitwandelen + drinken + eten binnen 3
- 0 min\n\n## Richtwaarden\n\n| Parameter | Richtlijn |\n|---|---|\n| Afstan
- d / duur | 18–21 km of 2\,5–3 u (duur + vert > afstand) |\n| Hoogtemet
- ers | **mik op 500+ m** als het terrein het toelaat |\n| Hartslag | Zone 2
- \, plafond 162 bpm de eerste 2/3 |\n| RPE | 5–6 (zwaarder op de slotklim
- s is oké) |\n\n**Voet (go/no-go):** Ochtendcheck = beslissend\, dit is de
-  langste loop. Stop bij het eerste hielsignaal — beter een loop inkorten
-  dan de Dolomieten-trip riskeren. Lopen-wandelen op de steile klims is pri
- ma en zelfs realistisch (zo wandel je ook op de berg).\n\n**Na deze loop:*
- * taper begint (Blok 4). Geen nieuwe grote prikkels meer nodig — vanaf h
- ier consolideren en uitrusten.\n
+SUMMARY:Heuvelintervallen — Karel Sabbeberg (13 km)
+DESCRIPTION:# Sessie: Heuvelintervallen — Karel Sabbeberg (13 km)\n\n**Da
+ tum:** zo 5 jul 2026  \n**Blok:** 3 — Piektraining  \n**Week:** 12  \n**
+ Type:** Intervallen — heuvel/klimkracht + daalkracht  \n**Status:** Gepl
+ and  \n**Voltooid:** nee  \n**Afstand:** ~13 km (incl. warm-up/cool-down) 
+  \n**Locatie:** Karel Sabbeberg\, Gent — dichtbij\, gekend (deed je al o
+ p 23/4)  \n**Conditie:** Droog\, ~24–25°C overdag\, 's avonds 24→20°
+ C\, lichte wind. Loop **laat op de avond** voor de koelte.\n\n## Achtergro
+ nd — planwijziging\n\nDit is de enige kwaliteitsslot van de week (do = k
+ racht\, vr = rust\, za = trouw). Daarom géén vlakke weg-interval maar **
+ bergspecifiek** — dat is wat het Dolomieten-doel nodig heeft. De grote 
+ ≥500 hm vert-loop is **niet** dit weekend (te zwaar na de trouw) maar st
+ aat begin volgende week in Heuvelland.\n\n## Doel\n\nKlimkracht én daalkr
+ acht in één. De klim ís het werk-interval\; de afdaling is geen verlore
+ n tijd maar **eccentrische quad-training** — precies je grootste berg-ga
+ t ("geen quad-failure op lange afdalingen"). Up-en-neer repeats geven dus 
+ twee prikkels tegelijk.\n\n## Uitvoering\n\n1. 15 min easy inlopen (rustig
+ \, volledig los)\n2. **6–8× de klim bergop** op stevig tempo\, RPE 7–
+ 8\, Zone 4 — krachtig maar gecontroleerd\, niet sprinten\n3. Afdaling: *
+ *gecontroleerd-stevig terug naar beneden lopen** (niet slabakken — dit t
+ raint daalkracht)\, dan kort uitblazen tot HR < 140 vóór de volgende rep
+ \n4. 10–12 min easy uitlopen\n5. Totaal ~13 km\n\n## Richtwaarden\n\n| P
+ arameter | Richtlijn |\n|---|---|\n| Totaal | ~13 km incl. warm-up/cool-do
+ wn |\n| Klim-effort | RPE 7–8\, Zone 4 (170–178 bpm mag bovenaan de kl
+ im) |\n| Afdaling | gecontroleerd-stevig\, quads laten werken |\n| Herstel
+  | laat HR zakken tot <140 voor de volgende rep |\n| RPE | 7–8 op de rep
+ s |\n\n## Aanpassingen\n\n**Hitte:** Loop laat op de avond (21:00+ → ~24
+ °C dalend). In de warmte loopt HR sneller op — stuur op gevoel/kracht\,
+  niet op een HR-getal. Drink + elektrolyten mee. **Als het te warm aanvoel
+ t: schaal terug naar 4–5 reps** i.p.v. 6–8.\n\n**Na de trouw:** Voel j
+ e zaterdagavond/zondagochtend hoe de trouw je kost. Compromise recovery (l
+ aat\, drank\, weinig slaap) → maak er een rustige 8–10 km easy van i.p
+ .v. de reps\, en we schuiven de kwaliteit door. Niets forceren.\n\n**Voet 
+ (go/no-go):** Klimmen belast kuit/voet. Ochtendcheck beslissend. Stop bij 
+ het eerste hielsignaal — niet de moeite van een blessure waard zo dicht 
+ bij de Dolomieten.\n
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:stravacoach-2026-07-11-lange-duurloop-trail-maximale-hoogtemeters-daalk
+ racht@stravacoach
+DTSTAMP:20260630T221309Z
+DTSTART;VALUE=DATE:20260711
+DTEND;VALUE=DATE:20260712
+SUMMARY:Heuvelland vert-loop — ≥500 hm 🏔️
+DESCRIPTION:# Sessie: Heuvelland vert-loop — ≥500 hm 🏔️\n\n**Datum
+ :** za 11 jul 2026 *(richtdatum — flexibel\, begin–midden volgende wee
+ k)*  \n**Blok:** 3 — Piektraining (laatste grote prikkel vóór taper)  
+ \n**Week:** 13  \n**Type:** Lange duurloop — trail\, maximale hoogtemete
+ rs\, daalkracht  \n**Status:** Gepland  \n**Voltooid:** nee  \n**Afstand:*
+ * 13–16 km  \n**Duur:** ~1:45–2:15  \n**Locatie:** **Heuvelland / Kemm
+ elberg** (West-Vlaanderen) — Kemmelberg\, Monteberg\, Rodeberg\, Scherpe
+ nberg\, Baneberg liggen dicht bijeen → aaneengesloten klim/daal-lus.\n\n
+ ## Achtergrond\n\nDit is **dé Dolomieten-checklist-sessie:** ≥500 hoogt
+ emeters in één loop\, met échte aaneengesloten klimmen én lange afdali
+ ngen. Bewust **niet** op Karel Sabbeberg (20× dezelfde heuvel = trapmolen
+ \, mist het continue klim/daal-karakter). En bewust **niet** 21 km — Heu
+ velland propt de vert in minder afstand\, dus 13–16 km volstaat ruim voo
+ r 500+ hm. Daarna start de taper (Blok 4) richting vertrek 20/7.\n\n## Doe
+ l\n\nMaximale tijd op de benen op klimrijk terrein + bewuste daaltechniek.
+  De afdalingen zijn even belangrijk als de klimmen — eccentrische quad-k
+ racht voor de lange Dolomieten-afdalingen. Hier vink je idealiter de **≥
+ 500 hm in één sessie** af.\n\n## Uitvoering\n\n1. **Echt koolhydraat-ont
+ bijt** + **gel elke 30–40 min** + ruim water/elektrolyten mee (les van 2
+ 0/6: niet op gel-als-ontbijt vertrekken). Dit is een lange/zware loop → 
+ wél fuelen\, anders dan de halve van 30/6.\n2. Rijg de bergen aan elkaar 
+ tot een lus van 13–16 km met zoveel mogelijk vert\n3. 15 min easy inlope
+ n\n4. Klim **consistent**\, daal **actief en gecontroleerd** — laat de q
+ uads werken\n5. Lopen-wandelen op de steilste klims is prima (zo wandel je
+  ook op de berg)\n6. Uitwandelen + drinken + eten binnen 30 min\n\n## Rich
+ twaarden\n\n| Parameter | Richtlijn |\n|---|---|\n| Afstand / duur | 13–
+ 16 km / ~1:45–2:15 (vert > afstand) |\n| Hoogtemeters | **mik op 500+ m*
+ * |\n| Hartslag | Zone 2\, plafond 162 bpm op de klimmen aanhouden |\n| RP
+ E | 5–6 (zwaarder op de slotklims is oké) |\n\n## Aandachtspunten\n\n**
+ 3-dagen-regel:** ten vroegste 3 dagen na een zware beendag/kwaliteitssessi
+ e. Sabbeberg-reps zo 5/7 → deze loop vanaf wo 8/7 ✓ (richtdatum za 11/
+ 7 geeft ruim herstel).\n\n**Voet (go/no-go):** Ochtendcheck beslissend. St
+ op bij het eerste hielsignaal — beter inkorten dan de trip riskeren.\n\n
+ **Na deze loop:** taper begint. Geen nieuwe grote prikkels meer — consol
+ ideren en uitrusten richting 20/7.\n
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:stravacoach-2026-07-20-goal@stravacoach
-DTSTAMP:20260623T101830Z
+DTSTAMP:20260630T221309Z
 DTSTART;VALUE=DATE:20260720
 DTEND;VALUE=DATE:20260721
 SUMMARY:🎯 Mountain hiking in the Dolomites
